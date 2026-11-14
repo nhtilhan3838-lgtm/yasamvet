@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>YAŞAMvet Farm Edition • Çiftlik Otomasyonu & Güvenli Giriş</title>
+  <title>YAŞAMvet • Farm Edition • Çiftlik & Sürü Yönetim Sistemi</title>
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- FontAwesome Icons -->
@@ -23,7 +23,7 @@
             sans: ['Inter', 'sans-serif'],
           },
           colors: {
-            farm: {
+            vet: {
               50: '#f0fdf4',
               100: '#dcfce7',
               500: '#22c55e',
@@ -57,12 +57,13 @@
       <!-- BRANDING HEADER -->
       <div class="text-center space-y-2">
         <div class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-emerald-600 to-green-400 flex items-center justify-center text-slate-950 font-bold text-3xl mx-auto shadow-xl shadow-emerald-950">
-          <i class="fa-solid fa-wheat-awn"></i>
+          <i class="fa-solid fa-cow"></i>
         </div>
         <h1 class="text-2xl font-black tracking-tight text-white">
           YAŞAM<span class="text-emerald-400">vet</span>
         </h1>
-        <p class="text-xs uppercase tracking-widest text-emerald-500 font-bold">Çiftlik & Sürü Otomasyon Sistemi</p>
+        <p class="text-xs uppercase tracking-widest text-emerald-500 font-bold">YAŞAMvet • Farm Edition</p>
+        <p class="text-[11px] text-slate-400">Yönetici: Vet. Hekim Nihat İlhan (0553 053 05 97)</p>
       </div>
 
       <!-- LOGIN FORM -->
@@ -70,7 +71,7 @@
         <div>
           <label class="block text-xs font-semibold text-slate-300 mb-1.5">Kullanıcı Adı</label>
           <div class="relative">
-            <input type="text" id="login-username" required placeholder="admin veya çiftlik kullanıcı adı" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-emerald-500 pl-10 font-mono">
+            <input type="text" id="login-username" required placeholder="nhtilhan" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-emerald-500 pl-10 font-mono">
             <i class="fa-solid fa-user text-slate-500 absolute left-3.5 top-3 text-xs"></i>
           </div>
         </div>
@@ -78,49 +79,26 @@
         <div>
           <label class="block text-xs font-semibold text-slate-300 mb-1.5">Şifre</label>
           <div class="relative">
-            <input type="password" id="login-password" required placeholder="••••••••" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-emerald-500 pl-10">
+            <input type="password" id="login-password" required placeholder="••••••••" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-emerald-500 pl-10 font-mono">
             <i class="fa-solid fa-lock text-slate-500 absolute left-3.5 top-3 text-xs"></i>
           </div>
         </div>
 
         <button type="submit" class="w-full py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs transition-all shadow-lg shadow-emerald-950 flex items-center justify-center gap-2">
-          <i class="fa-solid fa-right-to-bracket text-sm"></i> Sisteme Güvenli Giriş Yap
+          <i class="fa-solid fa-right-to-bracket text-sm"></i> Sisteme Giriş Yap
         </button>
       </form>
 
-      <!-- DEMO CREDENTIALS HINTS -->
-      <div class="p-3.5 bg-slate-950 rounded-2xl border border-slate-800 text-[11px] text-slate-400 space-y-2">
-        <p class="font-bold text-emerald-400 flex items-center gap-1">
-          <i class="fa-solid fa-circle-info"></i> Demo / Hızlı Giriş Bilgileri:
+      <!-- APK & MOBILE APP NOTICE -->
+      <div class="p-3.5 bg-emerald-950/40 rounded-2xl border border-emerald-500/30 text-[11px] text-emerald-200 space-y-1.5">
+        <p class="font-bold flex items-center gap-1.5">
+          <i class="fa-solid fa-mobile-screen-button text-emerald-400"></i> Mobil Uygulama (APK) Hazır
         </p>
-        <div class="grid grid-cols-2 gap-2 font-mono">
-          <div onclick="fillDemoCredentials('admin', 'yasamvet')" class="p-2 bg-slate-900 hover:bg-slate-800 rounded-xl cursor-pointer border border-slate-800 transition-colors">
-            <p class="text-white font-bold">Yönetici (Admin):</p>
-            <p class="text-emerald-300">admin / yasamvet</p>
-          </div>
-          <div onclick="fillDemoCredentials('akbas_ciftlik', '123456')" class="p-2 bg-slate-900 hover:bg-slate-800 rounded-xl cursor-pointer border border-slate-800 transition-colors">
-            <p class="text-white font-bold">Çiftlik Üreticisi:</p>
-            <p class="text-emerald-300">akbas_ciftlik / 123456</p>
-          </div>
-        </div>
+        <p class="text-slate-300 text-[10px]">
+          Bu sistemi telefonunuza doğrudan Android APK veya PWA uygulaması olarak kurabilirsiniz. Sol menüden <strong>"Mobil APK Kurulumu"</strong> sekmesini ziyaret edin.
+        </p>
       </div>
 
-    </div>
-  </div>
-
-  <!-- EXPIRED ACCOUNT LOCKED OVERLAY SCREEN -->
-  <div id="expired-lock-screen" class="hidden fixed inset-0 z-50 flex items-center justify-center p-6 bg-slate-950">
-    <div class="max-w-md w-full bg-slate-900 border border-rose-900/50 rounded-3xl p-8 text-center space-y-4 shadow-2xl">
-      <div class="w-16 h-16 rounded-2xl bg-rose-500/10 text-rose-500 border border-rose-500/20 flex items-center justify-center mx-auto text-3xl">
-        <i class="fa-solid fa-lock"></i>
-      </div>
-      <h2 class="text-2xl font-extrabold text-white">Erişim Süreniz Dolmuştur</h2>
-      <p class="text-xs text-slate-400 leading-relaxed">
-        Bu çiftlik hesabının lisans/kullanım süresi tamamlanmıştır. Veri girişi ve takibine devam etmek için lütfen sistem genel yöneticiniz (<strong class="text-white">Nihat İlhan</strong>) ile iletişime geçiniz.
-      </p>
-      <button onclick="handleLogout()" class="px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-white text-xs font-bold transition-all">
-        <i class="fa-solid fa-arrow-left mr-1"></i> Giriş Ekranına Dön
-      </button>
     </div>
   </div>
 
@@ -135,13 +113,13 @@
       
       <!-- BRAND HEADER -->
       <div class="p-5 border-b border-slate-800 flex items-center justify-between">
-        <div class="flex items-center gap-3">
-          <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-emerald-600 to-green-400 flex items-center justify-center text-slate-950 font-bold text-xl shadow-lg shadow-emerald-950">
-            <i class="fa-solid fa-wheat-awn"></i>
+        <div onclick="switchView('dashboard')" class="flex items-center gap-3 cursor-pointer group">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-emerald-600 to-green-400 flex items-center justify-center text-slate-950 font-bold text-xl shadow-lg shadow-emerald-950 group-hover:scale-105 transition-transform">
+            <i class="fa-solid fa-cow"></i>
           </div>
           <div>
-            <h1 class="font-black text-lg tracking-tight text-white flex items-center gap-1">
-              YAŞAM<span class="text-emerald-400">vet</span>
+            <h1 class="font-black text-lg tracking-tight text-white flex items-center gap-1 group-hover:text-emerald-400 transition-colors">
+              YAŞAM<span class="text-emerald-400 group-hover:text-white transition-colors">vet</span>
             </h1>
             <p class="text-[10px] uppercase tracking-wider text-slate-400 font-bold">FARM EDITION</p>
           </div>
@@ -154,15 +132,15 @@
       <!-- LOGGED-IN PROFILE INFO & LOGOUT -->
       <div class="px-5 py-3.5 bg-slate-950/60 border-b border-slate-800/80 flex items-center justify-between">
         <div class="flex items-center gap-2.5 min-w-0">
-          <div id="user-avatar" class="w-8 h-8 rounded-lg bg-emerald-500/20 text-emerald-400 font-extrabold flex items-center justify-center text-xs border border-emerald-500/30 shrink-0">
-            Nİ
+          <div id="sidebar-user-avatar" class="w-8 h-8 rounded-lg bg-emerald-500/20 text-emerald-400 font-extrabold flex items-center justify-center text-xs border border-emerald-500/30 shrink-0">
+            Y
           </div>
           <div class="truncate">
-            <p id="user-display-name" class="text-xs font-bold text-slate-100 truncate">Nihat İlhan</p>
-            <p id="user-display-role" class="text-[10px] text-emerald-400 font-semibold truncate">Genel Yönetici</p>
+            <p id="sidebar-user-name" class="text-xs font-bold text-slate-100 truncate">Vet. Hekim Nihat İlhan</p>
+            <p id="sidebar-user-role" class="text-[10px] text-emerald-400 font-semibold truncate">Genel Yönetici</p>
           </div>
         </div>
-        <button onclick="handleLogout()" title="Güvenli Çıkış" class="p-2 rounded-lg bg-slate-800 hover:bg-rose-900/40 text-slate-300 hover:text-rose-400 transition-colors">
+        <button onclick="handleLogout()" title="Çıkış Yap" class="p-2 rounded-lg bg-slate-800 hover:bg-rose-900/40 text-slate-300 hover:text-rose-400 transition-colors">
           <i class="fa-solid fa-power-off text-xs"></i>
         </button>
       </div>
@@ -171,57 +149,60 @@
       <nav class="flex-1 overflow-y-auto p-4 space-y-1">
         
         <button onclick="switchView('dashboard')" id="nav-dashboard" class="nav-btn active w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-sm font-medium transition-all text-emerald-400 bg-emerald-500/10 border border-emerald-500/20">
-          <i class="fa-solid fa-chart-pie w-5 text-center text-base"></i> Genel Dashboard
+          <i class="fa-solid fa-chart-pie w-5 text-center text-base"></i> Çiftlik Dashboard
         </button>
 
-        <!-- ADMIN ONLY MODULE -->
-        <div id="admin-only-menu" class="space-y-1">
-          <div class="pt-3 pb-1 px-3 text-[10px] font-bold uppercase tracking-wider text-emerald-500/80">Yönetici Modülleri</div>
-          <button onclick="switchView('users')" id="nav-users" class="nav-btn w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-sm font-medium transition-all text-slate-400 hover:text-slate-100 hover:bg-slate-800/60">
-            <i class="fa-solid fa-users-gear w-5 text-center text-base"></i> Çiftlik & Lisans Yönetimi
-            <span id="badge-users-count" class="ml-auto text-xs px-2 py-0.5 rounded-full bg-slate-800 text-slate-300 font-normal">0</span>
-          </button>
-        </div>
-
-        <div class="pt-3 pb-1 px-3 text-[10px] font-bold uppercase tracking-wider text-slate-500">Çiftlik İşlemleri</div>
+        <div class="pt-3 pb-1 px-3 text-[10px] font-bold uppercase tracking-wider text-slate-500">Sürü & İşletme Modülleri</div>
         
+        <button onclick="switchView('tenants')" id="nav-tenants" class="nav-btn admin-only w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-sm font-medium transition-all text-slate-400 hover:text-slate-100 hover:bg-slate-800/60">
+          <i class="fa-solid fa-house-chimney-user w-5 text-center text-base"></i> İşletmeler
+          <span id="badge-tenants-count" class="ml-auto text-xs px-2 py-0.5 rounded-full bg-slate-800 text-slate-300 font-normal">0</span>
+        </button>
+
         <button onclick="switchView('animals')" id="nav-animals" class="nav-btn w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-sm font-medium transition-all text-slate-400 hover:text-slate-100 hover:bg-slate-800/60">
-          <i class="fa-solid fa-cow w-5 text-center text-base"></i> Sürü Portföyü & Excel
+          <i class="fa-solid fa-cow w-5 text-center text-base"></i> Hayvanlar
           <span id="badge-animals-count" class="ml-auto text-xs px-2 py-0.5 rounded-full bg-slate-800 text-slate-300 font-normal">0</span>
         </button>
         
         <button onclick="switchView('treatments')" id="nav-treatments" class="nav-btn w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-sm font-medium transition-all text-slate-400 hover:text-slate-100 hover:bg-slate-800/60">
-          <i class="fa-solid fa-kit-medical w-5 text-center text-base"></i> Hastalık & Arıtma Süreleri
+          <i class="fa-solid fa-kit-medical w-5 text-center text-base"></i> Tedavi
           <span id="badge-treatments-active" class="ml-auto text-xs px-2 py-0.5 rounded-full bg-amber-500/20 text-amber-400 border border-amber-500/30 font-normal">0</span>
         </button>
 
         <button onclick="switchView('breeding')" id="nav-breeding" class="nav-btn w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-sm font-medium transition-all text-slate-400 hover:text-slate-100 hover:bg-slate-800/60">
-          <i class="fa-solid fa-dna w-5 text-center text-base"></i> Üreme & Doğum Takibi
+          <i class="fa-solid fa-dna w-5 text-center text-base"></i> Suni Tohumlama / Gebelik
         </button>
 
         <button onclick="switchView('oestrus')" id="nav-oestrus" class="nav-btn w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-sm font-medium transition-all text-slate-400 hover:text-slate-100 hover:bg-slate-800/60">
           <i class="fa-solid fa-calendar-days w-5 text-center text-base"></i> Östrus Senkronizasyonu
-          <span id="badge-oestrus-count" class="ml-auto text-xs px-2 py-0.5 rounded-full bg-purple-500/20 text-purple-400 border border-purple-500/30 font-normal">0</span>
         </button>
 
         <button onclick="switchView('finance')" id="nav-finance" class="nav-btn w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-sm font-medium transition-all text-slate-400 hover:text-slate-100 hover:bg-slate-800/60">
-          <i class="fa-solid fa-file-invoice-dollar w-5 text-center text-base"></i> Çiftlik Finans & Gider
+          <i class="fa-solid fa-file-invoice-dollar w-5 text-center text-base"></i> Gelir / Gider
         </button>
 
         <button onclick="switchView('payments')" id="nav-payments" class="nav-btn w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-sm font-medium transition-all text-slate-400 hover:text-slate-100 hover:bg-slate-800/60">
-          <i class="fa-solid fa-clock-rotate-left w-5 text-center text-base"></i> Borç & Alacak Takvimi
+          <i class="fa-solid fa-clock-rotate-left w-5 text-center text-base"></i> Ödeme Takvimi
         </button>
 
         <button onclick="switchView('announcements')" id="nav-announcements" class="nav-btn w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-sm font-medium transition-all text-slate-400 hover:text-slate-100 hover:bg-slate-800/60">
-          <i class="fa-solid fa-bullhorn w-5 text-center text-base"></i> Duyuru Kanalı
+          <i class="fa-solid fa-bullhorn w-5 text-center text-base"></i> Duyurular
+        </button>
+
+        <button onclick="switchView('apk')" id="nav-apk" class="nav-btn w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-sm font-medium transition-all text-emerald-300 hover:bg-emerald-950/40 border border-emerald-500/20">
+          <i class="fa-solid fa-mobile-screen-button w-5 text-center text-base text-emerald-400"></i> Mobil APK Kurulumu
+        </button>
+
+        <button onclick="switchView('settings')" id="nav-settings" class="nav-btn w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-sm font-medium transition-all text-slate-400 hover:text-slate-100 hover:bg-slate-800/60">
+          <i class="fa-solid fa-gear w-5 text-center text-base"></i> Ayarlar & Şifre
         </button>
       </nav>
 
-      <!-- VETERINARY & WHATSAPP QUICK SUPPORT WIDGET -->
+      <!-- WHATSAPP DIRECT ACTION WIDGET -->
       <div class="px-4 py-3 mx-4 my-2 rounded-2xl bg-gradient-to-br from-emerald-950/80 to-slate-900 border border-emerald-500/30 space-y-2 text-xs">
         <div class="flex items-center gap-2">
           <div class="w-7 h-7 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-xs shrink-0">
-            <i class="fa-solid fa-user-doctor"></i>
+            <i class="fa-solid fa-phone"></i>
           </div>
           <div class="truncate">
             <p class="font-bold text-white text-[11px] truncate">Vet. Hekim Nihat İlhan</p>
@@ -229,7 +210,7 @@
           </div>
         </div>
         <div class="grid grid-cols-2 gap-1.5 pt-1">
-          <a href="https://wa.me/905530530597?text=Merhaba%20Nihat%20Bey,%20çiftlik%20yönetim%20sistemi%20üzerinden%20ulaşıyorum." target="_blank" 
+          <a href="https://wa.me/905530530597?text=Merhaba%20Nihat%20Bey,%20çiftlik%20sisteminden%20ulaşıyorum." target="_blank" 
              class="py-1.5 px-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-[10px] text-center transition-all flex items-center justify-center gap-1 shadow-md shadow-emerald-950">
             <i class="fa-brands fa-whatsapp text-xs"></i> WhatsApp
           </a>
@@ -243,8 +224,8 @@
       <!-- SYSTEM FOOTER -->
       <div class="p-4 border-t border-slate-800 bg-slate-950/80 text-[11px] text-slate-400 flex items-center justify-between">
         <div>
-          <p class="font-bold text-slate-200">YAŞAMvet Farm v3.4</p>
-          <p class="text-[10px]">Güvenli Oturum Modu</p>
+          <p class="font-bold text-slate-200">YAŞAMvet v4.0</p>
+          <p class="text-[10px]">Çiftlik Otomasyonu</p>
         </div>
         <i class="fa-solid fa-shield-halved text-emerald-400 text-base"></i>
       </div>
@@ -258,7 +239,7 @@
         <button onclick="toggleSidebar()" class="p-2 rounded-lg bg-slate-800 text-slate-300">
           <i class="fa-solid fa-bars text-lg"></i>
         </button>
-        <span class="font-extrabold text-white tracking-tight">YAŞAM<span class="text-emerald-400">vet</span> Farm</span>
+        <span onclick="switchView('dashboard')" class="font-extrabold text-white tracking-tight cursor-pointer">YAŞAM<span class="text-emerald-400">vet</span></span>
         <div class="flex items-center gap-2">
           <a href="https://wa.me/905530530597?text=Merhaba%20Nihat%20Bey" target="_blank" class="p-2 rounded-lg bg-emerald-600 text-white">
             <i class="fa-brands fa-whatsapp text-sm"></i>
@@ -270,245 +251,168 @@
       </header>
 
       <!-- DYNAMIC CONTENT CONTAINER -->
-      <div class="p-4 md:p-6 lg:p-8 space-y-6 max-w-7xl mx-auto w-full">
+      <main class="flex-1 flex flex-col min-w-0 bg-slate-950 overflow-y-auto">
+        <div class="p-4 md:p-6 lg:p-8 space-y-6 max-w-7xl mx-auto w-full">
 
         <!-- ========================================== -->
-        <!-- VIEW 1: DASHBOARD (ANA SAYFA)              -->
+        <!-- VIEW 0: DASHBOARD                          -->
         <!-- ========================================== -->
         <section id="view-dashboard" class="view-section space-y-6">
-          
-          <!-- WELCOME BANNER -->
-          <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 p-6 rounded-3xl bg-gradient-to-r from-slate-900 via-slate-900 to-emerald-950/60 border border-slate-800 shadow-xl relative overflow-hidden">
-            <div class="absolute -right-10 -bottom-10 w-56 h-56 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
+          <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-800 pb-4">
             <div>
-              <span id="dash-role-pill" class="inline-flex items-center px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 text-[11px] font-bold border border-emerald-500/30 mb-2">
-                <!-- Role -->
-              </span>
-              <h2 id="dash-welcome-title" class="text-2xl font-black text-white tracking-tight">Çiftlik Genel Bakış Paneli</h2>
-              <p id="dash-welcome-sub" class="text-xs text-slate-400 mt-1">Sürü kategorileri, resmi küpe / çiftlik özel numaraları ve süt arıtma süreleri günceldir.</p>
+              <h2 class="text-2xl font-black tracking-tight text-white flex items-center gap-2">
+                <span>Çiftlik Sürü ve Finans Paneli</span>
+                <span id="dash-role-badge" class="text-xs px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">Yönetici</span>
+              </h2>
+              <p class="text-xs text-slate-400 mt-1">İşletmeler, hayvan varlığı, arıtma süreli tedaviler ve çiftlik hesapları</p>
             </div>
-            <div class="flex items-center gap-3">
-              <button onclick="switchView('animals'); setAnimalSubTab('excel')" class="px-3.5 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-emerald-400 text-xs font-bold border border-emerald-500/30 transition-all flex items-center gap-2">
-                <i class="fa-solid fa-file-excel text-sm"></i> Excel Toplu Yükle
+            <div class="flex items-center gap-2">
+              <button onclick="switchView('breeding')" class="px-3.5 py-2 rounded-xl bg-pink-600 hover:bg-pink-500 text-white font-bold text-xs transition-all shadow-md flex items-center gap-2">
+                <i class="fa-solid fa-dna"></i> Suni Tohumlama / Gebelik
               </button>
-              <button onclick="switchView('animals'); setAnimalSubTab('single')" class="px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold transition-all shadow-lg shadow-emerald-950 flex items-center gap-2">
-                <i class="fa-solid fa-plus"></i> Hayvan Ekle
+              <button onclick="switchView('treatments')" class="px-3.5 py-2 rounded-xl bg-amber-600 hover:bg-amber-500 text-white font-bold text-xs transition-all shadow-md flex items-center gap-2">
+                <i class="fa-solid fa-kit-medical"></i> Tedavi Kaydet
               </button>
             </div>
           </div>
 
-          <!-- WITHDRAWAL PERIOD WARNING BANNER -->
-          <div id="withdrawal-alert-banner" class="hidden p-4 rounded-2xl bg-rose-950/60 border border-rose-800/80 text-xs text-rose-200 space-y-2">
-            <div class="flex items-center gap-2 font-bold text-rose-300 text-sm">
-              <i class="fa-solid fa-triangle-exclamation text-rose-400 text-base animate-pulse"></i>
-              <span>DİKKAT: Süt / Et Arıtma Süresi Devam Eden Hayvanlar Var!</span>
-            </div>
-            <p id="withdrawal-alert-text" class="text-xs text-rose-300/90 leading-relaxed"></p>
-          </div>
-
-          <!-- KPI METRIC CARDS -->
-          <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            
-            <div class="bg-slate-900 border border-slate-800 rounded-2xl p-4 flex flex-col justify-between hover:border-slate-700 transition-colors">
+          <!-- KPI STATS CARDS -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+            <div class="bg-slate-900 border border-slate-800 rounded-2xl p-4 space-y-2 shadow-lg">
               <div class="flex items-center justify-between text-slate-400">
-                <span class="text-[11px] font-bold uppercase tracking-wider text-slate-400">Toplam Sürü</span>
-                <div class="w-8 h-8 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center">
-                  <i class="fa-solid fa-cow text-sm"></i>
-                </div>
+                <span class="text-xs font-medium">Toplam Hayvan</span>
+                <i class="fa-solid fa-cow text-emerald-400 text-base"></i>
               </div>
-              <div class="mt-3">
-                <span id="kpi-animals" class="text-2xl font-black text-white">0</span>
-                <span class="text-xs text-slate-400 ml-1.5">Baş Hayvan</span>
-              </div>
+              <p id="kpi-animals-count" class="text-2xl font-black text-white">0 Baş</p>
+              <p class="text-[10px] text-emerald-400 font-semibold">Sürü Varlığı</p>
             </div>
 
-            <div class="bg-slate-900 border border-slate-800 rounded-2xl p-4 flex flex-col justify-between hover:border-slate-700 transition-colors">
+            <div class="bg-slate-900 border border-slate-800 rounded-2xl p-4 space-y-2 shadow-lg">
               <div class="flex items-center justify-between text-slate-400">
-                <span class="text-[11px] font-bold uppercase tracking-wider text-slate-400">Sağmal İnek</span>
-                <div class="w-8 h-8 rounded-lg bg-blue-500/10 text-blue-400 flex items-center justify-center">
-                  <i class="fa-solid fa-bottle-droplet text-sm"></i>
-                </div>
+                <span class="text-xs font-medium">Devam Eden Tedavi</span>
+                <i class="fa-solid fa-kit-medical text-amber-400 text-base"></i>
               </div>
-              <div class="mt-3">
-                <span id="kpi-milking" class="text-2xl font-black text-blue-400">0</span>
-                <span class="text-xs text-slate-400 ml-1.5">Aktif Sağımda</span>
-              </div>
+              <p id="kpi-treatments-active" class="text-2xl font-black text-amber-400">0 Devam</p>
+              <p class="text-[10px] text-slate-400">Arıtma Süresi Takibi</p>
             </div>
 
-            <div class="bg-slate-900 border border-slate-800 rounded-2xl p-4 flex flex-col justify-between hover:border-slate-700 transition-colors">
+            <div class="bg-slate-900 border border-slate-800 rounded-2xl p-4 space-y-2 shadow-lg">
               <div class="flex items-center justify-between text-slate-400">
-                <span class="text-[11px] font-bold uppercase tracking-wider text-slate-400">Aktif Tedavi</span>
-                <div class="w-8 h-8 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center">
-                  <i class="fa-solid fa-kit-medical text-sm"></i>
-                </div>
+                <span class="text-xs font-medium">Toplam Gelir</span>
+                <i class="fa-solid fa-arrow-trend-up text-emerald-400 text-base"></i>
               </div>
-              <div class="mt-3">
-                <span id="kpi-treatments" class="text-2xl font-black text-amber-400">0</span>
-                <span class="text-xs text-slate-400 ml-1.5">Müdahale Var</span>
-              </div>
+              <p id="kpi-total-income" class="text-xl font-black text-emerald-400">₺0.00</p>
+              <p class="text-[10px] text-slate-400">Süt, Satış & Diğer</p>
             </div>
 
-            <div class="bg-slate-900 border border-slate-800 rounded-2xl p-4 flex flex-col justify-between hover:border-slate-700 transition-colors">
+            <div class="bg-slate-900 border border-slate-800 rounded-2xl p-4 space-y-2 shadow-lg">
               <div class="flex items-center justify-between text-slate-400">
-                <span class="text-[11px] font-bold uppercase tracking-wider text-slate-400">Aktif Östrus</span>
-                <div class="w-8 h-8 rounded-lg bg-purple-500/10 text-purple-400 flex items-center justify-center">
-                  <i class="fa-solid fa-calendar-check text-sm"></i>
-                </div>
+                <span class="text-xs font-medium">Toplam Gider</span>
+                <i class="fa-solid fa-arrow-trend-down text-rose-400 text-base"></i>
               </div>
-              <div class="mt-3">
-                <span id="kpi-oestrus" class="text-2xl font-black text-purple-400">0</span>
-                <span class="text-xs text-slate-400 ml-1.5">Protokol İlerliyor</span>
+              <p id="kpi-total-expense" class="text-xl font-black text-rose-400">₺0.00</p>
+              <p class="text-[10px] text-slate-400">Yem & İlaç Gideri</p>
+            </div>
+
+            <div class="bg-slate-900 border border-slate-800 rounded-2xl p-4 space-y-2 shadow-lg">
+              <div class="flex items-center justify-between text-slate-400">
+                <span class="text-xs font-medium">Net Bakiye</span>
+                <i class="fa-solid fa-wallet text-cyan-400 text-base"></i>
               </div>
+              <p id="kpi-net-balance" class="text-xl font-black text-cyan-400">₺0.00</p>
+              <p class="text-[10px] text-slate-400">Kasa Durumu</p>
             </div>
           </div>
 
-          <!-- FINANCIAL KPI ROW -->
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div class="bg-slate-900 border border-slate-800 p-4 rounded-2xl flex items-center justify-between">
-              <div>
-                <p class="text-xs text-slate-400 font-medium">Toplam Gelir (Süt & Satış)</p>
-                <p id="kpi-income" class="text-xl font-black text-emerald-400 mt-1">₺0</p>
-              </div>
-              <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-lg">
-                <i class="fa-solid fa-arrow-trend-up"></i>
-              </div>
-            </div>
-            <div class="bg-slate-900 border border-slate-800 p-4 rounded-2xl flex items-center justify-between">
-              <div>
-                <p class="text-xs text-slate-400 font-medium">Toplam Gider (Yem & İlaç)</p>
-                <p id="kpi-expense" class="text-xl font-black text-rose-400 mt-1">₺0</p>
-              </div>
-              <div class="w-10 h-10 rounded-xl bg-rose-500/10 text-rose-400 flex items-center justify-center text-lg">
-                <i class="fa-solid fa-arrow-trend-down"></i>
-              </div>
-            </div>
-            <div class="bg-slate-900 border border-slate-800 p-4 rounded-2xl flex items-center justify-between">
-              <div>
-                <p class="text-xs text-slate-400 font-medium">Çiftlik Net Kar / Bakiye</p>
-                <p id="kpi-net" class="text-xl font-black text-white mt-1">₺0</p>
-              </div>
-              <div class="w-10 h-10 rounded-xl bg-cyan-500/10 text-cyan-400 flex items-center justify-center text-lg">
-                <i class="fa-solid fa-scale-balanced"></i>
-              </div>
-            </div>
-          </div>
-
-          <!-- DUAL SEARCH (KÜPE NO & ÇİFTLİK İÇİ ÖZEL NO) -->
-          <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5 space-y-4">
+          <!-- QUICK ANIMAL SEARCH & LIST -->
+          <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5 space-y-4 shadow-lg">
             <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
-              <div>
-                <h3 class="font-bold text-slate-100 text-base flex items-center gap-2">
-                  <i class="fa-solid fa-magnifying-glass text-emerald-400"></i> Hızlı Sürü Arama (Küpe No / Çiftlik Özel No / Sürü No)
-                </h3>
-              </div>
-              <div class="w-full sm:w-96 relative">
-                <input type="text" id="dash-search-input" onkeyup="filterDashAnimals()" placeholder="Resmi küpe no, çiftlik içi özel no, sürü no veya il/ilçe..." 
-                  class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3.5 py-2 text-xs text-white focus:outline-none focus:border-emerald-500 pl-9">
-                <i class="fa-solid fa-search text-slate-500 absolute left-3 top-2.5 text-xs"></i>
-              </div>
+              <h3 class="font-bold text-slate-100 text-base flex items-center gap-2">
+                <i class="fa-solid fa-magnifying-glass text-emerald-400"></i> Hızlı Küpe Arama & Sürü Listesi
+              </h3>
+              <input type="text" id="dash-search-input" onkeyup="filterDashAnimals()" placeholder="Resmi küpe, özel no, sürü no veya ırk ara..." class="w-full sm:w-80 bg-slate-950 border border-slate-700 rounded-xl px-3.5 py-2 text-xs text-white focus:outline-none focus:border-emerald-500 font-mono">
             </div>
+
             <div class="overflow-x-auto">
               <table class="w-full text-left text-sm">
-                <thead class="bg-slate-950 text-slate-400 text-xs uppercase tracking-wider">
+                <thead class="bg-slate-950 text-slate-400 text-xs uppercase">
                   <tr>
-                    <th class="py-3 px-3 rounded-l-lg">Resmi Küpe No</th>
-                    <th class="py-3 px-3">Çiftlik İçi Özel No</th>
+                    <th class="py-3 px-3">Resmi Küpe No</th>
+                    <th class="py-3 px-3">Özel No / İsim</th>
                     <th class="py-3 px-3">Sürü No</th>
-                    <th class="py-3 px-3">Tür / Irk / Cins</th>
+                    <th class="py-3 px-3">Tür / Irk / Cinsiyet</th>
                     <th class="py-3 px-3">Durumu</th>
-                    <th class="py-3 px-3">Konum (İl/İlçe)</th>
-                    <th class="py-3 px-3 text-right rounded-r-lg">İşlem</th>
+                    <th class="py-3 px-3">Konum & Sahip</th>
+                    <th class="py-3 px-3 text-right">İşlem</th>
                   </tr>
                 </thead>
                 <tbody id="dash-animal-table" class="divide-y divide-slate-800 text-slate-300">
-                  <!-- Rendered dynamically -->
+                  <!-- Dynamic Rows -->
                 </tbody>
               </table>
             </div>
           </div>
-
         </section>
 
         <!-- ========================================== -->
-        <!-- VIEW 2: ÇİFTLİK & LİSANS YÖNETİMİ (ADMIN)  -->
+        <!-- VIEW 1: İŞLETMELER (YÖNETİCİ)              -->
         <!-- ========================================== -->
-        <section id="view-users" class="view-section hidden space-y-6">
+        <section id="view-tenants" class="view-section hidden space-y-6">
           <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-800 pb-4">
             <div>
-              <h2 class="text-xl font-bold text-white">Çiftlik Kullanıcıları & Abonelik / Süre Yönetimi</h2>
-              <p class="text-xs text-slate-400">Üreticiler için kullanıcı adı/şifre tanımlama ve abonelik bitiş sürelerini esnek ayarlama paneli</p>
+              <h2 class="text-xl font-bold text-white">İşletmeler ve Lisans / Süre Yönetimi</h2>
+              <p class="text-xs text-slate-400">Çiftlik kullanıcılarına şifre tanımlama ve abonelik bitiş tarihi belirleme</p>
             </div>
           </div>
 
           <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-            <!-- CREATE USER FORM WITH SUBSCRIPTION PERIODS -->
             <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5 space-y-4 h-fit">
               <h3 class="font-bold text-slate-100 text-base border-b border-slate-800 pb-2 flex items-center gap-2">
-                <i class="fa-solid fa-user-plus text-emerald-400"></i> Yeni Çiftlik Hesabı & Abonelik Tanımla
+                <i class="fa-solid fa-house-chimney-user text-emerald-400"></i> Yeni İşletme & Kullanıcı Ekle
               </h3>
-              <form id="form-add-user" onsubmit="handleAddUser(event)" class="space-y-3">
+              <form id="form-add-tenant" onsubmit="handleAddTenant(event)" class="space-y-3">
                 <div>
-                  <label class="block text-xs font-medium text-slate-300 mb-1">Çiftlik / İşletme Adı *</label>
-                  <input type="text" id="user-farmname" required placeholder="Örn: Akbaş Süt Çiftliği" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-xs text-white focus:border-emerald-500 focus:outline-none">
-                </div>
-                <div>
-                  <label class="block text-xs font-medium text-slate-300 mb-1">Kullanıcı Adı *</label>
-                  <input type="text" id="user-name" required placeholder="Örn: akbas_ciftlik" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-xs text-white focus:border-emerald-500 focus:outline-none font-mono">
+                  <label class="block text-xs font-medium text-slate-300 mb-1">İşletme Adı *</label>
+                  <input type="text" id="tenant-name" required placeholder="Akbaş Süt Çiftliği" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-xs text-white focus:border-emerald-500 focus:outline-none">
                 </div>
                 <div>
-                  <label class="block text-xs font-medium text-slate-300 mb-1">İlk Şifre *</label>
-                  <input type="text" id="user-pass" required value="123456" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-xs text-white focus:border-emerald-500 focus:outline-none">
+                  <label class="block text-xs font-medium text-slate-300 mb-1">İşletme Numarası</label>
+                  <input type="text" id="tenant-no" placeholder="TR-38-001" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-xs text-white focus:border-emerald-500 focus:outline-none">
                 </div>
-                
-                <!-- SUBSCRIPTION PERIOD SELECTOR -->
-                <div class="space-y-1.5">
-                  <label class="block text-xs font-medium text-emerald-400">Abonelik Süresi / Paket Seçimi *</label>
-                  <select id="user-sub-preset" onchange="onUserSubPresetChange(this.value)" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-xs text-white focus:border-emerald-500 focus:outline-none">
-                    <option value="30">1 Ay (30 Gün)</option>
-                    <option value="90">3 Ay (90 Gün)</option>
-                    <option value="180">6 Ay (180 Gün)</option>
-                    <option value="365" selected>1 Yıl (365 Gün)</option>
-                    <option value="730">2 Yıl (730 Gün)</option>
-                    <option value="custom">Özel Tarih Belirle...</option>
-                  </select>
+                <div class="grid grid-cols-2 gap-2">
+                  <div>
+                    <label class="block text-xs font-medium text-slate-300 mb-1">Kullanıcı Adı *</label>
+                    <input type="text" id="tenant-username" required placeholder="akbas" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-xs text-white focus:border-emerald-500 focus:outline-none font-mono">
+                  </div>
+                  <div>
+                    <label class="block text-xs font-medium text-slate-300 mb-1">İlk Şifre *</label>
+                    <input type="text" id="tenant-password" required placeholder="1234" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-xs text-white focus:border-emerald-500 focus:outline-none">
+                  </div>
                 </div>
-
-                <div id="user-custom-date-wrapper" class="hidden">
-                  <label class="block text-xs font-medium text-slate-300 mb-1">Özel Bitiş Tarihi *</label>
-                  <input type="date" id="user-expire" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-xs text-white focus:border-emerald-500 focus:outline-none">
-                </div>
-
                 <div>
-                  <label class="block text-xs font-medium text-slate-300 mb-1">Yetki Rolü</label>
-                  <select id="user-role" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-xs text-white focus:border-emerald-500 focus:outline-none">
-                    <option value="farm">Çiftlik Üreticisi (Sadece kendi verileri)</option>
-                    <option value="admin">Sistem Genel Yöneticisi</option>
-                  </select>
+                  <label class="block text-xs font-medium text-slate-300 mb-1">Abonelik / Lisans Bitiş Tarihi *</label>
+                  <input type="date" id="tenant-expires" required class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-xs text-white focus:border-emerald-500 focus:outline-none">
                 </div>
                 <button type="submit" class="w-full py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs transition-all shadow-lg shadow-emerald-950">
-                  <i class="fa-solid fa-save mr-1"></i> Hesabı ve Aboneliği Kaydet
+                  <i class="fa-solid fa-save mr-1"></i> İşletmeyi Kaydet
                 </button>
               </form>
             </div>
 
-            <!-- USER LIST TABLE -->
             <div class="lg:col-span-2 bg-slate-900 border border-slate-800 rounded-2xl p-5 space-y-4">
-              <h3 class="font-bold text-slate-100 text-base flex items-center justify-between">
-                <span>Kayıtlı Çiftlik Abonelikleri ve Süre Durumları</span>
-                <span id="users-count-badge" class="text-xs bg-slate-800 text-slate-300 px-2.5 py-1 rounded-full font-normal">0 kullanıcı</span>
-              </h3>
+              <h3 class="font-bold text-slate-100 text-base">Kayıtlı İşletmeler ve Lisans Süreleri</h3>
               <div class="overflow-x-auto">
                 <table class="w-full text-left text-sm">
                   <thead class="bg-slate-950 text-slate-400 text-xs uppercase">
                     <tr>
-                      <th class="py-3 px-3">İşletme Adı</th>
-                      <th class="py-3 px-3">Kullanıcı / Şifre</th>
-                      <th class="py-3 px-3">Abonelik Bitiş</th>
+                      <th class="py-3 px-3">İşletme Adı / No</th>
+                      <th class="py-3 px-3">Giriş Bilgileri</th>
+                      <th class="py-3 px-3">Lisans Bitiş</th>
                       <th class="py-3 px-3">Durum</th>
-                      <th class="py-3 px-3 text-right">Süre Uzat</th>
+                      <th class="py-3 px-3 text-right">İşlem</th>
                     </tr>
                   </thead>
-                  <tbody id="users-table-body" class="divide-y divide-slate-800 text-slate-300">
+                  <tbody id="tenants-table-body" class="divide-y divide-slate-800 text-slate-300">
                     <!-- Dynamic Rows -->
                   </tbody>
                 </table>
@@ -518,93 +422,81 @@
         </section>
 
         <!-- ========================================== -->
-        <!-- VIEW 3: SÜRÜ PORTFÖYÜ & EXCEL AKTARIMI    -->
+        <!-- VIEW 2: HAYVANLAR & EXCEL AKTARIMI         -->
         <!-- ========================================== -->
         <section id="view-animals" class="view-section hidden space-y-6">
           <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-800 pb-4">
             <div>
-              <h2 class="text-xl font-bold text-white">Sürü Portföyü & Excel İşlemleri</h2>
-              <p class="text-xs text-slate-400">Tekil hayvan kaydı yapabilir veya hazırladığınız Excel dosyasından tüm sürü verilerini tek tıkla yükleyebilirsiniz.</p>
+              <h2 class="text-xl font-bold text-white">Hayvanlar & Sürü Portföyü / Excel</h2>
+              <p class="text-xs text-slate-400">Tekil hayvan kaydı yapabilir veya Excel dosyanızla binlerce hayvanı tek tıkla sisteme aktarabilirsiniz.</p>
             </div>
             
-            <!-- SUB TAB BUTTONS -->
             <div class="flex items-center gap-2 bg-slate-900 border border-slate-800 p-1 rounded-xl">
               <button onclick="setAnimalSubTab('excel')" id="subtab-btn-excel" class="px-3 py-1.5 rounded-lg text-xs font-bold transition-all text-emerald-400 bg-emerald-500/10 border border-emerald-500/30 flex items-center gap-1.5">
                 <i class="fa-solid fa-file-excel"></i> Excel ile Toplu Yükle
               </button>
               <button onclick="setAnimalSubTab('single')" id="subtab-btn-single" class="px-3 py-1.5 rounded-lg text-xs font-bold transition-all text-slate-400 hover:text-white flex items-center gap-1.5">
-                <i class="fa-solid fa-plus-circle"></i> Tekil Form Kaydı
+                <i class="fa-solid fa-plus-circle"></i> Tekil Kayıt Formu
               </button>
             </div>
           </div>
 
           <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
             
-            <!-- LEFT FORM CONTAINER (EXCEL OR SINGLE MANUAL ENTRY) -->
             <div class="space-y-4">
               
-              <!-- OPTION A: EXCEL BULK UPLOAD PANEL -->
+              <!-- EXCEL UPLOAD PANEL -->
               <div id="panel-animal-excel" class="bg-slate-900 border border-slate-800 rounded-2xl p-5 space-y-4">
                 <div class="flex items-center justify-between border-b border-slate-800 pb-3">
                   <h3 class="font-bold text-slate-100 text-sm flex items-center gap-2">
-                    <i class="fa-solid fa-file-excel text-emerald-400 text-base"></i> Excel İle Toplu Aktarım
+                    <i class="fa-solid fa-file-excel text-emerald-400 text-base"></i> Excel Toplu Yükleme
                   </h3>
                   <button onclick="downloadSampleExcel()" class="px-2.5 py-1 rounded-lg bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-400 text-[11px] font-bold border border-emerald-500/30 transition-all flex items-center gap-1">
-                    <i class="fa-solid fa-download"></i> Örnek Şablon İndir
+                    <i class="fa-solid fa-download"></i> Örnek Şablon
                   </button>
                 </div>
 
-                <div class="p-3 bg-slate-950 rounded-xl border border-slate-800 text-[11px] text-slate-300 space-y-1 leading-relaxed">
-                  <p class="font-bold text-emerald-300"><i class="fa-solid fa-circle-info mr-1"></i> Excel Sütun Sırası / Başlıkları:</p>
+                <div class="p-3 bg-slate-950 rounded-xl border border-slate-800 text-[11px] text-slate-300 space-y-1">
+                  <p class="font-bold text-emerald-300"><i class="fa-solid fa-circle-info mr-1"></i> Gerekli Sütun Başlıkları:</p>
                   <p class="text-[10px] text-slate-400">Küpe Numarası, Tür, Irk, Cinsiyet, Doğum Tarihi, Durumu, İl, İlçe, Mahalle, İşletme Sahibi Kişi/Firma, Bulunduğu İşletme, Anne Küpe Numarası, Sürü No, Çiftlik İçi Özel No.</p>
                 </div>
 
-                <!-- DRAG & DROP AREA -->
                 <div id="drop-zone" onclick="document.getElementById('excel-file-input').click()" 
                      class="border-2 border-dashed border-emerald-500/30 hover:border-emerald-500 bg-slate-950/60 hover:bg-emerald-950/20 rounded-2xl p-6 text-center cursor-pointer transition-all space-y-2">
                   <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 flex items-center justify-center mx-auto text-xl">
                     <i class="fa-solid fa-cloud-arrow-up"></i>
                   </div>
-                  <p class="text-xs font-bold text-slate-200">Excel Dosyanızı Buraya Sürükleyin veya Seçin</p>
-                  <p class="text-[10px] text-slate-400"> Desteklenen formatlar: .xlsx, .xls, .csv</p>
+                  <p class="text-xs font-bold text-slate-200">Excel Dosyası Seçin veya Sürükleyin</p>
+                  <p class="text-[10px] text-slate-400">.xlsx, .xls, .csv</p>
                   <input type="file" id="excel-file-input" accept=".xlsx, .xls, .csv" onchange="handleExcelFile(event)" class="hidden">
                 </div>
 
-                <!-- PARSED PREVIEW COUNTER & SAVE ACTION -->
                 <div id="excel-preview-box" class="hidden space-y-3 pt-2 border-t border-slate-800">
                   <div class="flex items-center justify-between text-xs">
-                    <span class="text-slate-300">Okunan Geçerli Record:</span>
+                    <span class="text-slate-300">Okunan Kayıt:</span>
                     <strong id="parsed-count-badge" class="text-emerald-400 font-extrabold text-sm">0 Hayvan</strong>
                   </div>
                   <button onclick="saveImportedExcelData()" class="w-full py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs transition-all shadow-lg shadow-emerald-950 flex items-center justify-center gap-2">
-                    <i class="fa-solid fa-check-double"></i> Excel Verilerini Sürüye Kaydet
+                    <i class="fa-solid fa-check-double"></i> Verileri Sisteme Kaydet
                   </button>
                 </div>
               </div>
 
-              <!-- OPTION B: SINGLE MANUAL FORM -->
+              <!-- SINGLE MANUAL FORM -->
               <div id="panel-animal-single" class="hidden bg-slate-900 border border-slate-800 rounded-2xl p-5 space-y-4">
                 <h3 class="font-bold text-slate-100 text-sm border-b border-slate-800 pb-2 flex items-center gap-2">
-                  <i class="fa-solid fa-cow text-emerald-400"></i> Tekil Hayvan Kaydı Ekle
+                  <i class="fa-solid fa-cow text-emerald-400"></i> Tekil Hayvan Kaydı
                 </h3>
                 <form id="form-add-animal" onsubmit="handleAddAnimal(event)" class="space-y-3">
-                  
                   <div class="grid grid-cols-2 gap-2">
                     <div>
                       <label class="block text-[11px] font-medium text-slate-300 mb-1">Küpe Numarası *</label>
                       <input type="text" id="animal-tag" required placeholder="TR3800123456" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-2.5 py-1.5 text-xs text-white focus:border-emerald-500 focus:outline-none font-mono">
                     </div>
                     <div>
-                      <label class="block text-[11px] font-medium text-emerald-400 mb-1">Çiftlik İçi Özel No / İsim</label>
-                      <input type="text" id="animal-custom-code" placeholder="Örn: S-042 / Sarıkız" class="w-full bg-slate-950 border border-emerald-800/80 rounded-xl px-2.5 py-1.5 text-xs text-emerald-200 focus:border-emerald-500 focus:outline-none">
+                      <label class="block text-[11px] font-medium text-emerald-400 mb-1">Çiftlik İçi Özel No</label>
+                      <input type="text" id="animal-custom-code" placeholder="S-042" class="w-full bg-slate-950 border border-emerald-800/80 rounded-xl px-2.5 py-1.5 text-xs text-emerald-200 focus:border-emerald-500 focus:outline-none">
                     </div>
-                  </div>
-
-                  <div id="farm-select-container">
-                    <label class="block text-[11px] font-medium text-slate-300 mb-1">Ait Olduğu İşletme *</label>
-                    <select id="animal-farm" required class="w-full bg-slate-950 border border-slate-700 rounded-xl px-2.5 py-1.5 text-xs text-white focus:border-emerald-500 focus:outline-none">
-                      <!-- Options -->
-                    </select>
                   </div>
 
                   <div class="grid grid-cols-2 gap-2">
@@ -643,14 +535,14 @@
                   </div>
 
                   <div>
-                    <label class="block text-[11px] font-medium text-slate-300 mb-1">Durumu / Kategorisi *</label>
+                    <label class="block text-[11px] font-medium text-slate-300 mb-1">Durumu *</label>
                     <select id="animal-status" required class="w-full bg-slate-950 border border-slate-700 rounded-xl px-2.5 py-1.5 text-xs text-white focus:border-emerald-500 focus:outline-none">
-                      <option value="Sağmal İnek">Sağmal İnek (Aktif Sağımda)</option>
-                      <option value="Kuru İnek">Kuru İnek (Kuru Dönemde)</option>
+                      <option value="Sağmal İnek">Sağmal İnek</option>
+                      <option value="Kuru İnek">Kuru İnek</option>
                       <option value="Gebe Düve">Gebe Düve</option>
                       <option value="Boş Düve">Boş Düve</option>
-                      <option value="Buzağı">Buzağı (0-6 Ay)</option>
-                      <option value="Tosun / Boğa">Tosun / Boğa (Besi)</option>
+                      <option value="Buzağı">Buzağı</option>
+                      <option value="Tosun / Boğa">Tosun / Boğa</option>
                     </select>
                   </div>
 
@@ -686,28 +578,28 @@
                   </div>
 
                   <button type="submit" class="w-full py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs transition-all shadow-lg shadow-emerald-950">
-                    <i class="fa-solid fa-save mr-1"></i> Hayvanı Tekil Kaydet
+                    <i class="fa-solid fa-save mr-1"></i> Hayvanı Kaydet
                   </button>
                 </form>
               </div>
 
             </div>
 
-            <!-- ANIMAL LIST TABLE & PREVIEW -->
+            <!-- ANIMAL LIST TABLE -->
             <div class="lg:col-span-2 bg-slate-900 border border-slate-800 rounded-2xl p-5 space-y-4">
               <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
                 <h3 class="font-bold text-slate-100 text-base flex items-center gap-2">
-                  <span>Sürü Portföy Kayıtları</span>
+                  <span>Kayıtlı Hayvan Listesi</span>
                   <span id="animals-total-badge" class="text-xs bg-slate-800 text-slate-300 px-2 py-0.5 rounded-full font-normal">0 baş</span>
                 </h3>
-                <input type="text" id="animal-filter-input" onkeyup="renderAnimalsTable()" placeholder="Küpe no, çiftlik özel no, sürü no veya durum..." class="w-full sm:w-72 bg-slate-950 border border-slate-700 rounded-xl px-3 py-1.5 text-xs text-white focus:outline-none focus:border-emerald-500">
+                <input type="text" id="animal-filter-input" onkeyup="renderAnimalsTable()" placeholder="Küpe no, özel no, sürü no ara..." class="w-full sm:w-72 bg-slate-950 border border-slate-700 rounded-xl px-3 py-1.5 text-xs text-white focus:outline-none focus:border-emerald-500">
               </div>
 
-              <!-- PREVIEW MODAL / TABLE FOR EXCEL UPLOAD PREVIEW -->
+              <!-- EXCEL PREVIEW TABLE -->
               <div id="excel-import-preview-table-container" class="hidden p-3 bg-slate-950 border border-emerald-900/60 rounded-xl space-y-2">
                 <div class="flex items-center justify-between">
-                  <span class="text-xs font-bold text-emerald-400"><i class="fa-solid fa-eye mr-1"></i> Excel'den Okunan Önizleme Listesi</span>
-                  <button onclick="clearExcelPreview()" class="text-[10px] text-rose-400 hover:underline">İptal Et / Temizle</button>
+                  <span class="text-xs font-bold text-emerald-400"><i class="fa-solid fa-eye mr-1"></i> Excel Önizleme</span>
+                  <button onclick="clearExcelPreview()" class="text-[10px] text-rose-400 hover:underline">İptal Et</button>
                 </div>
                 <div class="overflow-x-auto max-h-56">
                   <table class="w-full text-left text-xs">
@@ -718,8 +610,6 @@
                         <th class="p-2">Tür / Irk</th>
                         <th class="p-2">Cinsiyet</th>
                         <th class="p-2">Durumu</th>
-                        <th class="p-2">İl / İlçe</th>
-                        <th class="p-2">Sürü No</th>
                       </tr>
                     </thead>
                     <tbody id="excel-preview-tbody" class="divide-y divide-slate-800 text-slate-300">
@@ -728,14 +618,13 @@
                 </div>
               </div>
 
-              <!-- MAIN DATABASE TABLE -->
               <div class="overflow-x-auto">
                 <table class="w-full text-left text-sm">
                   <thead class="bg-slate-950 text-slate-400 text-xs uppercase">
                     <tr>
                       <th class="py-3 px-3">Resmi Küpe No</th>
-                      <th class="py-3 px-3">Çiftlik Özel No</th>
-                      <th class="py-3 px-3">Tür / Irk / Cins</th>
+                      <th class="py-3 px-3">Özel No</th>
+                      <th class="py-3 px-3">Tür / Irk</th>
                       <th class="py-3 px-3">Durumu</th>
                       <th class="py-3 px-3">Konum & Sahip</th>
                       <th class="py-3 px-3">Sürü No</th>
@@ -752,45 +641,66 @@
         </section>
 
         <!-- ========================================== -->
-        <!-- VIEW 4: HASTALIK VE ARITMA SÜRELERİ        -->
+        <!-- VIEW 3: TEDAVI & ARITMA SÜRESİ             -->
         <!-- ========================================== -->
         <section id="view-treatments" class="view-section hidden space-y-6">
           <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-800 pb-4">
             <div>
-              <h2 class="text-xl font-bold text-white">Hastalık & Süt/Et Arıtma Süreleri</h2>
-              <p class="text-xs text-slate-400">İlaç kullanımı sonrası yasal süt ve et arıtma (bekleme) süreleri ve veteriner müdahaleleri</p>
+              <h2 class="text-xl font-bold text-white">Tedavi & Süt / Et Arıtma Süresi</h2>
+              <p class="text-xs text-slate-400">Çoklu hastalık teşhisi ve 5 adede kadar ilaç ekleme, arıtma süresi hesaplama</p>
             </div>
           </div>
 
           <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-            <!-- ADD TREATMENT FORM -->
             <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5 space-y-4 h-fit">
               <h3 class="font-bold text-slate-100 text-base border-b border-slate-800 pb-2 flex items-center gap-2">
-                <i class="fa-solid fa-notes-medical text-amber-400"></i> Tedavi & İlaç Kaydı
+                <i class="fa-solid fa-notes-medical text-amber-400"></i> Tedavi Kaydet
               </h3>
               <form id="form-add-treatment" onsubmit="handleAddTreatment(event)" class="space-y-3">
                 <div>
                   <label class="block text-xs font-medium text-slate-300 mb-1">Hayvan Küpe / Özel No *</label>
-                  <input type="text" id="treat-tag" required placeholder="TR3800123456 veya S-042" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-xs text-white focus:border-emerald-500 focus:outline-none">
+                  <select id="treat-tag" required class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-xs text-white focus:border-emerald-500 focus:outline-none">
+                    <option value="">Kayıtlı Hayvan Seçin...</option>
+                  </select>
                 </div>
                 <div>
                   <label class="block text-xs font-medium text-slate-300 mb-1">Uygulama Tarihi *</label>
                   <input type="date" id="treat-date" required class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-xs text-white focus:border-emerald-500 focus:outline-none">
                 </div>
                 <div>
-                  <label class="block text-xs font-medium text-slate-300 mb-1">Teşhis / Şikayet *</label>
-                  <input type="text" id="treat-diag" required placeholder="Örn: Akut Mastitis / Piyometra" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-xs text-white focus:border-emerald-500 focus:outline-none">
+                  <label class="block text-xs font-medium text-slate-300 mb-1">Teşhis / Hastalık Seçin *</label>
+                  <select id="treat-diag" required class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-xs text-white focus:border-emerald-500 focus:outline-none">
+                    <option value="Akut Mastitis">Akut Mastitis</option>
+                    <option value="Topallık / Tırnak Çürüğü">Topallık / Tırnak Çürüğü</option>
+                    <option value="Metritis / Piyometra">Metritis / Piyometra</option>
+                    <option value="Solunum Yolu / Pnömoni">Solunum Yolu / Pnömoni</option>
+                    <option value="Şap Enfeksiyonu">Şap Enfeksiyonu</option>
+                    <option value="İshal / Enterit">İshal / Enterit</option>
+                    <option value="Ketozis / Milk Fever">Ketozis / Milk Fever</option>
+                    <option value="Diğer Özel Teşhis">Diğer Özel Teşhis</option>
+                  </select>
                 </div>
-                <div>
-                  <label class="block text-xs font-medium text-slate-300 mb-1">İlaç ve Dozaj</label>
-                  <input type="text" id="treat-med" placeholder="Örn: Penicillin-Streptomycin 20ml" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-xs text-white focus:border-emerald-500 focus:outline-none">
+
+                <!-- DYNAMIC 5 MEDICATIONS SLOTS -->
+                <div class="space-y-2 pt-2 border-t border-slate-800">
+                  <div class="flex items-center justify-between">
+                    <label class="block text-xs font-bold text-emerald-400">Kullanılan İlaçlar (En Fazla 5 Adet)</label>
+                    <button type="button" onclick="addMedicationSlot()" class="text-[10px] text-emerald-400 hover:underline">
+                      <i class="fa-solid fa-plus mr-0.5"></i> İlaç Ekle
+                    </button>
+                  </div>
+                  <div id="medication-slots-container" class="space-y-2">
+                    <div class="flex gap-2 med-slot-row">
+                      <input type="text" placeholder="1. İlaç Adı ve Dozajı (Örn: Penstrep 20ml)" class="flex-1 bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-xs text-white focus:border-emerald-500 focus:outline-none med-input">
+                    </div>
+                  </div>
                 </div>
+
                 <div class="p-3 bg-rose-950/40 border border-rose-900/60 rounded-xl space-y-2">
                   <label class="block text-xs font-bold text-rose-300">
-                    <i class="fa-solid fa-triangle-exclamation mr-1"></i> Yasal Süt Arıtma Süresi (Gün)
+                    <i class="fa-solid fa-triangle-exclamation mr-1"></i> Süt Arıtma Süresi (Gün)
                   </label>
-                  <input type="number" id="treat-withdrawal" min="0" value="3" placeholder="Örn: 3 gün süt dökülecek" class="w-full bg-slate-950 border border-rose-800 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-rose-500">
-                  <p class="text-[10px] text-rose-400">İlaç prospektüsüne göre sütün tanka dökülmeyeceği gün sayısı.</p>
+                  <input type="number" id="treat-withdrawal" min="0" value="3" class="w-full bg-slate-950 border border-rose-800 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-rose-500">
                 </div>
                 <div>
                   <label class="block text-xs font-medium text-slate-300 mb-1">Tedavi Durumu</label>
@@ -801,21 +711,20 @@
                   </select>
                 </div>
                 <button type="submit" class="w-full py-2.5 rounded-xl bg-amber-600 hover:bg-amber-500 text-white font-bold text-xs transition-all shadow-lg shadow-amber-950">
-                  <i class="fa-solid fa-save mr-1"></i> Kaydı Kaydet
+                  <i class="fa-solid fa-save mr-1"></i> Tedavi Kaydet
                 </button>
               </form>
             </div>
 
-            <!-- TREATMENT TABLE -->
             <div class="lg:col-span-2 bg-slate-900 border border-slate-800 rounded-2xl p-5 space-y-4">
-              <h3 class="font-bold text-slate-100 text-base">Aktif İlaç Kullanımları ve Süt Dökme Takvimi</h3>
+              <h3 class="font-bold text-slate-100 text-base">Aktif Tedaviler ve Süt Arıtma Takvimi</h3>
               <div class="overflow-x-auto">
                 <table class="w-full text-left text-sm">
                   <thead class="bg-slate-950 text-slate-400 text-xs uppercase">
                     <tr>
                       <th class="py-3 px-3">Küpe / Özel No</th>
-                      <th class="py-3 px-3">Teşhis / İlaç</th>
-                      <th class="py-3 px-3">Uygulama T.</th>
+                      <th class="py-3 px-3">Teşhis / İlaçlar</th>
+                      <th class="py-3 px-3">Tarih</th>
                       <th class="py-3 px-3">Süt Arıtma Bitiş</th>
                       <th class="py-3 px-3">Durum</th>
                       <th class="py-3 px-3 text-right">Sil</th>
@@ -831,36 +740,37 @@
         </section>
 
         <!-- ========================================== -->
-        <!-- VIEW 5: ÜREME VE DOĞUM KAYITLARI           -->
+        <!-- VIEW 4: SUNİ TOHUMLAMA / GEBELİK           -->
         <!-- ========================================== -->
         <section id="view-breeding" class="view-section hidden space-y-6">
           <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-800 pb-4">
             <div>
-              <h2 class="text-xl font-bold text-white">Üreme ve Doğum Yönetimi</h2>
-              <p class="text-xs text-slate-400">Kızgınlık, suni tohumlama, 30-45. gün gebelik teşhisi, kuruya çıkarma ve doğum kayıtları</p>
+              <h2 class="text-xl font-bold text-white">Suni Tohumlama / Gebelik Takibi</h2>
+              <p class="text-xs text-slate-400">Kızgınlık, suni tohumlama, gebelik muayenesi ve doğum takipleri</p>
             </div>
           </div>
 
           <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-            <!-- ADD BREEDING FORM -->
             <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5 space-y-4 h-fit">
               <h3 class="font-bold text-slate-100 text-base border-b border-slate-800 pb-2 flex items-center gap-2">
-                <i class="fa-solid fa-dna text-pink-400"></i> Üreme Hareketi Kaydet
+                <i class="fa-solid fa-dna text-pink-400"></i> Üreme İşlemi Kaydet
               </h3>
               <form id="form-add-breeding" onsubmit="handleAddBreeding(event)" class="space-y-3">
                 <div>
                   <label class="block text-xs font-medium text-slate-300 mb-1">Hayvan Küpe / Özel No *</label>
-                  <input type="text" id="breed-tag" required placeholder="TR3800123456 veya S-042" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-xs text-white focus:border-emerald-500 focus:outline-none">
+                  <select id="breed-tag" required class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-xs text-white focus:border-emerald-500 focus:outline-none">
+                    <option value="">Hayvan Seçin...</option>
+                  </select>
                 </div>
                 <div>
                   <label class="block text-xs font-medium text-slate-300 mb-1">İşlem Türü *</label>
                   <select id="breed-type" required onchange="calculateBreedingEstimates()" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-xs text-white focus:border-emerald-500 focus:outline-none">
-                    <option value="Kızgınlık">Kızgınlık Tespiti</option>
+                    <option value="Kızgınlık">Kızgınlık</option>
                     <option value="Suni Tohumlama">Suni Tohumlama</option>
                     <option value="Gebelik Muayenesi">Gebelik Muayenesi (USG)</option>
                     <option value="Kuruya Çıkarma">Kuruya Çıkarma</option>
-                    <option value="Doğum">Doğum Yapma</option>
-                    <option value="Düşük / Yavru Atma">Düşük / Yavru Atma</option>
+                    <option value="Doğum">Doğum</option>
+                    <option value="Düşük">Düşük</option>
                   </select>
                 </div>
                 <div>
@@ -869,15 +779,15 @@
                 </div>
                 <div>
                   <label class="block text-xs font-medium text-slate-300 mb-1">Boğa / Sperma Kodu</label>
-                  <input type="text" id="breed-bull" placeholder="Örn: US009988-Holstein" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-xs text-white focus:border-emerald-500 focus:outline-none">
+                  <input type="text" id="breed-bull" placeholder="Örn: Holstein-09" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-xs text-white focus:border-emerald-500 focus:outline-none">
                 </div>
                 <div>
                   <label class="block text-xs font-medium text-slate-300 mb-1">Tahmini Doğum Tarihi (+283 Gün)</label>
                   <input type="date" id="breed-estbirth" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-xs text-white focus:border-emerald-500 focus:outline-none">
                 </div>
                 <div>
-                  <label class="block text-xs font-medium text-slate-300 mb-1">Sonuç / Buzağı Küpe No</label>
-                  <input type="text" id="breed-result" placeholder="Örn: Gebe (+), Dişi Buzağı Doğdu" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-xs text-white focus:border-emerald-500 focus:outline-none">
+                  <label class="block text-xs font-medium text-slate-300 mb-1">Sonuç / Not</label>
+                  <input type="text" id="breed-result" placeholder="Örn: Gebe (+)" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-xs text-white focus:border-emerald-500 focus:outline-none">
                 </div>
                 <button type="submit" class="w-full py-2.5 rounded-xl bg-pink-600 hover:bg-pink-500 text-white font-bold text-xs transition-all shadow-lg shadow-pink-950">
                   <i class="fa-solid fa-save mr-1"></i> Üreme Kaydını Ekle
@@ -885,9 +795,8 @@
               </form>
             </div>
 
-            <!-- BREEDING TABLE -->
             <div class="lg:col-span-2 bg-slate-900 border border-slate-800 rounded-2xl p-5 space-y-4">
-              <h3 class="font-bold text-slate-100 text-base">Sürü Üreme ve Doğum Kayıtları</h3>
+              <h3 class="font-bold text-slate-100 text-base">Üreme ve Doğum Kayıtları</h3>
               <div class="overflow-x-auto">
                 <table class="w-full text-left text-sm">
                   <thead class="bg-slate-950 text-slate-400 text-xs uppercase">
@@ -911,26 +820,25 @@
         </section>
 
         <!-- ========================================== -->
-        <!-- VIEW 6: ÖSTRUS SENKRONİZASYONU            -->
+        <!-- VIEW 5: ÖSTRUS SENKRONİZASYONU            -->
         <!-- ========================================== -->
         <section id="view-oestrus" class="view-section hidden space-y-6">
           <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-800 pb-4">
             <div>
-              <h2 class="text-xl font-bold text-white">Östrus Senkronizasyonu & İlaç Takvimi</h2>
-              <p class="text-xs text-slate-400">Toplu tohumlama ve hormon protokollerinin (Ovsynch, PreSynch, CIDR) gün gün takibi</p>
+              <h2 class="text-xl font-bold text-white">Östrus Senkronizasyonu & Protokoller</h2>
+              <p class="text-xs text-slate-400">Ovsynch, CIDR ve hormon protokollerinin gün gün takibi</p>
             </div>
           </div>
 
           <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-            <!-- ADD PROTOCOL FORM -->
             <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5 space-y-4 h-fit">
               <h3 class="font-bold text-slate-100 text-base border-b border-slate-800 pb-2 flex items-center gap-2">
-                <i class="fa-solid fa-calendar-plus text-purple-400"></i> Programa Hayvan Ekle
+                <i class="fa-solid fa-calendar-plus text-purple-400"></i> Protokol Başlat
               </h3>
               <form id="form-add-oestrus" onsubmit="handleAddOestrus(event)" class="space-y-3">
                 <div>
                   <label class="block text-xs font-medium text-slate-300 mb-1">Hayvan Küpe / Özel No *</label>
-                  <input type="text" id="oestrus-tag" required placeholder="TR3800123456 veya S-042" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-xs text-white focus:border-emerald-500 focus:outline-none">
+                  <input type="text" id="oestrus-tag" required placeholder="TR3800123456" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-xs text-white focus:border-emerald-500 focus:outline-none">
                 </div>
                 <div>
                   <label class="block text-xs font-medium text-slate-300 mb-1">Protokol Seçin *</label>
@@ -951,9 +859,8 @@
               </form>
             </div>
 
-            <!-- ACTIVE PROTOCOL TIMELINES -->
             <div class="lg:col-span-2 space-y-4">
-              <h3 class="font-bold text-slate-100 text-base">Devam Eden Östrus Uygulama Adımları</h3>
+              <h3 class="font-bold text-slate-100 text-base">Aktif Östrus Adımları</h3>
               <div id="oestrus-cards-container" class="space-y-4">
                 <!-- Dynamically rendered protocol cards -->
               </div>
@@ -962,18 +869,17 @@
         </section>
 
         <!-- ========================================== -->
-        <!-- VIEW 7: GELİR VE GİDER YÖNETİMİ            -->
+        <!-- VIEW 6: GELİR / GİDER                      -->
         <!-- ========================================== -->
         <section id="view-finance" class="view-section hidden space-y-6">
           <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-800 pb-4">
             <div>
-              <h2 class="text-xl font-bold text-white">Çiftlik Gelir & Gider Muhasebesi</h2>
-              <p class="text-xs text-slate-400">Süt satışı, hayvan satışı, kesir yem harcamaları, veterinerlik ve elektrik/işçilik kalemleri</p>
+              <h2 class="text-xl font-bold text-white">Gelir & Gider Yönetimi</h2>
+              <p class="text-xs text-slate-400">Süt geliri, hayvan satışı, yem ve veteriner giderleri</p>
             </div>
           </div>
 
           <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-            <!-- ADD FINANCE FORM -->
             <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5 space-y-4 h-fit">
               <h3 class="font-bold text-slate-100 text-base border-b border-slate-800 pb-2 flex items-center gap-2">
                 <i class="fa-solid fa-file-invoice-dollar text-emerald-400"></i> Yeni Finans Kaydı
@@ -995,30 +901,28 @@
                   <select id="fin-cat" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-xs text-white focus:border-emerald-500 focus:outline-none">
                     <option value="Süt Geliri">Süt Geliri</option>
                     <option value="Hayvan Satışı">Hayvan Satışı</option>
-                    <option value="Yem & Rasyon">Yem & Rasyon Gideri</option>
-                    <option value="Veteriner & İlaç">Veteriner & İlaç Gideri</option>
-                    <option value="Personel & İşçilik">Personel & İşçilik</option>
-                    <option value="Elektrik & Su & Yakıt">Elektrik & Su & Yakıt</option>
+                    <option value="Yem Gideri">Yem Gideri</option>
+                    <option value="İlaç & Aşı">İlaç & Aşı</option>
+                    <option value="Personel">Personel</option>
                     <option value="Diğer">Diğer</option>
                   </select>
                 </div>
                 <div>
                   <label class="block text-xs font-medium text-slate-300 mb-1">Açıklama *</label>
-                  <input type="text" id="fin-desc" required placeholder="Örn: 2 Ton Kesir Yem Alımı" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-xs text-white focus:border-emerald-500 focus:outline-none">
+                  <input type="text" id="fin-desc" required placeholder="Örn: Günlük süt satışı" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-xs text-white focus:border-emerald-500 focus:outline-none">
                 </div>
                 <div>
                   <label class="block text-xs font-medium text-slate-300 mb-1">Tutar (₺) *</label>
                   <input type="number" step="0.01" id="fin-amount" required placeholder="0.00" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-xs text-white focus:border-emerald-500 focus:outline-none">
                 </div>
                 <button type="submit" class="w-full py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs transition-all shadow-lg shadow-emerald-950">
-                  <i class="fa-solid fa-save mr-1"></i> Finans Kaydını Ekle
+                  <i class="fa-solid fa-save mr-1"></i> Kaydı Ekle
                 </button>
               </form>
             </div>
 
-            <!-- FINANCE TABLE -->
             <div class="lg:col-span-2 bg-slate-900 border border-slate-800 rounded-2xl p-5 space-y-4">
-              <h3 class="font-bold text-slate-100 text-base">Finansal Hareketler Dökümü</h3>
+              <h3 class="font-bold text-slate-100 text-base">Gelir ve Gider Dökümü</h3>
               <div class="overflow-x-auto">
                 <table class="w-full text-left text-sm">
                   <thead class="bg-slate-950 text-slate-400 text-xs uppercase">
@@ -1026,7 +930,6 @@
                       <th class="py-3 px-3">Tür</th>
                       <th class="py-3 px-3">Tarih</th>
                       <th class="py-3 px-3">Kategori / Açıklama</th>
-                      <th class="py-3 px-3">İşletme</th>
                       <th class="py-3 px-3">Tutar</th>
                       <th class="py-3 px-3 text-right">Sil</th>
                     </tr>
@@ -1041,26 +944,25 @@
         </section>
 
         <!-- ========================================== -->
-        <!-- VIEW 8: BORÇ & ALACAK TAKVİMİ              -->
+        <!-- VIEW 7: ÖDEME & VADE TAKVİMİ               -->
         <!-- ========================================== -->
         <section id="view-payments" class="view-section hidden space-y-6">
           <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-800 pb-4">
             <div>
-              <h2 class="text-xl font-bold text-white">Borç & Alacak Vade Takvimi</h2>
-              <p class="text-xs text-slate-400">Süt fabrikası hakedişleri, yem fabrikası senetleri ve vadesi gelen ödemeler</p>
+              <h2 class="text-xl font-bold text-white">Ödeme & Vade Takvimi</h2>
+              <p class="text-xs text-slate-400">Alacaklar, borçlar ve tahsilat hatırlatmaları</p>
             </div>
           </div>
 
           <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-            <!-- ADD PAYMENT FORM -->
             <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5 space-y-4 h-fit">
               <h3 class="font-bold text-slate-100 text-base border-b border-slate-800 pb-2 flex items-center gap-2">
                 <i class="fa-solid fa-clock text-amber-400"></i> Ödeme Ekle
               </h3>
               <form id="form-add-payment" onsubmit="handleAddPayment(event)" class="space-y-3">
                 <div>
-                  <label class="block text-xs font-medium text-slate-300 mb-1">Ödeme Başlığı *</label>
-                  <input type="text" id="pay-title" required placeholder="Örn: Süt Fabrikası 15 Günlük Hakediş" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-xs text-white focus:border-emerald-500 focus:outline-none">
+                  <label class="block text-xs font-medium text-slate-300 mb-1">Başlık *</label>
+                  <input type="text" id="pay-title" required placeholder="Örn: Yem Faturası Vadesi" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-xs text-white focus:border-emerald-500 focus:outline-none">
                 </div>
                 <div>
                   <label class="block text-xs font-medium text-slate-300 mb-1">Vade Tarihi *</label>
@@ -1090,15 +992,13 @@
               </form>
             </div>
 
-            <!-- PAYMENTS TABLE -->
             <div class="lg:col-span-2 bg-slate-900 border border-slate-800 rounded-2xl p-5 space-y-4">
-              <h3 class="font-bold text-slate-100 text-base">Gelecek Vadelere Ait Ödeme ve Tahsilat Listesi</h3>
+              <h3 class="font-bold text-slate-100 text-base">Vadesi Gelen Ödemeler ve Tahsilatlar</h3>
               <div class="overflow-x-auto">
                 <table class="w-full text-left text-sm">
                   <thead class="bg-slate-950 text-slate-400 text-xs uppercase">
                     <tr>
                       <th class="py-3 px-3">Başlık</th>
-                      <th class="py-3 px-3">İşletme</th>
                       <th class="py-3 px-3">Tür</th>
                       <th class="py-3 px-3">Vade Tarihi</th>
                       <th class="py-3 px-3">Tutar</th>
@@ -1116,30 +1016,29 @@
         </section>
 
         <!-- ========================================== -->
-        <!-- VIEW 9: BILGILENDIRME VE DUYURULAR         -->
+        <!-- VIEW 8: DUYURULAR                          -->
         <!-- ========================================== -->
         <section id="view-announcements" class="view-section hidden space-y-6">
           <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-800 pb-4">
             <div>
-              <h2 class="text-xl font-bold text-white">Genel Yönetici Duyuruları</h2>
-              <p class="text-xs text-slate-400">Nihat İlhan ve yönetim ekibi tarafından tüm çiftliklere yayınlanan duyurular</p>
+              <h2 class="text-xl font-bold text-white">Duyurular & Bilgilendirme</h2>
+              <p class="text-xs text-slate-400">İşletmelere gönderilen duyurular</p>
             </div>
           </div>
 
           <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-            <!-- CREATE ANNOUNCEMENT FORM -->
-            <div id="announcement-create-card" class="bg-slate-900 border border-slate-800 rounded-2xl p-5 space-y-4 h-fit">
+            <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5 space-y-4 h-fit">
               <h3 class="font-bold text-slate-100 text-base border-b border-slate-800 pb-2 flex items-center gap-2">
-                <i class="fa-solid fa-bullhorn text-teal-400"></i> Duyuru Yayınla
+                <i class="fa-solid fa-bullhorn text-teal-400"></i> Duyuru Yaz
               </h3>
               <form id="form-add-announcement" onsubmit="handleAddAnnouncement(event)" class="space-y-3">
                 <div>
-                  <label class="block text-xs font-medium text-slate-300 mb-1">Duyuru Başlığı *</label>
-                  <input type="text" id="ann-title" required placeholder="Örn: Şap Aşısı ve Şap Karantinası Hakkında" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-xs text-white focus:border-emerald-500 focus:outline-none">
+                  <label class="block text-xs font-medium text-slate-300 mb-1">Başlık *</label>
+                  <input type="text" id="ann-title" required placeholder="Örn: Şap Aşısı Duyurusu" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-xs text-white focus:border-emerald-500 focus:outline-none">
                 </div>
                 <div>
-                  <label class="block text-xs font-medium text-slate-300 mb-1">Duyuru Mesajı *</label>
-                  <textarea id="ann-msg" required rows="4" placeholder="Çiftlik kullanıcılarına duyurulacak mesaj..." class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-xs text-white focus:border-emerald-500 focus:outline-none"></textarea>
+                  <label class="block text-xs font-medium text-slate-300 mb-1">Mesaj *</label>
+                  <textarea id="ann-msg" required rows="4" placeholder="Duyuru detayları..." class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-xs text-white focus:border-emerald-500 focus:outline-none"></textarea>
                 </div>
                 <button type="submit" class="w-full py-2.5 rounded-xl bg-teal-600 hover:bg-teal-500 text-white font-bold text-xs transition-all shadow-lg shadow-teal-950">
                   <i class="fa-solid fa-paper-plane mr-1"></i> Yayınla
@@ -1147,11 +1046,132 @@
               </form>
             </div>
 
-            <!-- ANNOUNCEMENT FEED -->
-            <div id="announcement-feed-wrapper" class="lg:col-span-2 space-y-4">
-              <h3 class="font-bold text-slate-100 text-base">Yayınlanan Duyuru Akışı</h3>
+            <div class="lg:col-span-2 space-y-4">
+              <h3 class="font-bold text-slate-100 text-base">Yayınlanan Duyurular</h3>
               <div id="announcement-feed" class="space-y-4">
                 <!-- Dynamic Render -->
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- VIEW 9: MOBİL APK KURULUM REHBERİ          -->
+        <!-- ========================================== -->
+        <section id="view-apk" class="view-section hidden space-y-6">
+          <div class="border-b border-slate-800 pb-4">
+            <h2 class="text-xl font-bold text-white flex items-center gap-2">
+              <i class="fa-solid fa-mobile-screen-button text-emerald-400"></i> Mobil APK & PWA Kurulum Rehberi
+            </h2>
+            <p class="text-xs text-slate-400 mt-1">YAŞAMvet uygulamasını telefonunuza uygulama olarak kurma adımları</p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 space-y-4 shadow-xl">
+              <div class="flex items-center gap-3 border-b border-slate-800 pb-3">
+                <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-lg border border-emerald-500/30">
+                  <i class="fa-brands fa-chrome"></i>
+                </div>
+                <div>
+                  <h3 class="font-bold text-white text-base">Yöntem 1: Doğrudan Telefona Kur (PWA)</h3>
+                  <p class="text-xs text-slate-400">Google Chrome ile saniyeler içinde ana ekrana ekleyin.</p>
+                </div>
+              </div>
+              <ol class="space-y-2.5 text-xs text-slate-300 list-decimal list-inside leading-relaxed">
+                <li class="pl-1">Android telefonunuzda <strong>Google Chrome</strong> tarayıcısını açın.</li>
+                <li class="pl-1">GitHub Pages site adresinize giriş yapın.</li>
+                <li class="pl-1">Tarayıcının sağ üst köşesindeki <strong>üç nokta (⋮)</strong> menüsüne dokunun.</li>
+                <li class="pl-1">Açılan menüden <strong>"Uygulamayı Yükle"</strong> veya <strong>"Ana Ekrana Ekle"</strong> seçeneğini seçin.</li>
+                <li class="pl-1">Artık YAŞAMvet telefonunuzun ana ekranında bir mobil uygulama olarak yer alacaktır!</li>
+              </ol>
+            </div>
+
+            <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 space-y-4 shadow-xl">
+              <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+                <div>
+                  <h3 class="font-bold text-slate-100 text-sm flex items-center gap-2">
+                    <i class="fa-solid fa-code text-emerald-400"></i> manifest.json Konfigürasyonu
+                  </h3>
+                  <p class="text-xs text-slate-400">Mobil mağaza tam ekran standartları</p>
+                </div>
+                <button onclick="copyManifestJson()" class="px-3 py-1.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold transition-all shadow-lg flex items-center gap-1.5">
+                  <i class="fa-solid fa-copy"></i> Kopyala
+                </button>
+              </div>
+              <div class="bg-slate-950 p-3 rounded-xl border border-slate-800 font-mono text-[11px] text-emerald-300 overflow-x-auto max-h-48">
+                <pre id="manifest-code-block">{
+  "name": "YAŞAMvet Çiftlik Otomasyonu",
+  "short_name": "YAŞAMvet",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#020617",
+  "theme_color": "#059669",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/616/616408.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}</pre>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- VIEW 10: AYARLAR & ŞİFRE DEĞİŞİMİ          -->
+        <!-- ========================================== -->
+        <section id="view-settings" class="view-section hidden space-y-6">
+          <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-800 pb-4">
+            <div>
+              <h2 class="text-xl font-bold text-white">Ayarlar & Şifre Değiştir</h2>
+              <p class="text-xs text-slate-400">Hesap bilgileri ve şifre güvenliği</p>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 space-y-4">
+              <h3 class="font-bold text-slate-100 text-base border-b border-slate-800 pb-3 flex items-center gap-2">
+                <i class="fa-solid fa-key text-emerald-400"></i> Şifre Değiştir
+              </h3>
+              <form onsubmit="handlePasswordChange(event)" class="space-y-4">
+                <div>
+                  <label class="block text-xs font-medium text-slate-300 mb-1.5">Mevcut Şifre *</label>
+                  <input type="password" id="settings-old-pass" required placeholder="••••••••" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-emerald-500">
+                </div>
+                <div>
+                  <label class="block text-xs font-medium text-slate-300 mb-1.5">Yeni Şifre *</label>
+                  <input type="password" id="settings-new-pass" required placeholder="••••••••" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-emerald-500">
+                </div>
+                <div>
+                  <label class="block text-xs font-medium text-slate-300 mb-1.5">Yeni Şifre (Tekrar) *</label>
+                  <input type="password" id="settings-new-pass-confirm" required placeholder="••••••••" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-emerald-500">
+                </div>
+                <button type="submit" class="w-full py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs transition-all shadow-lg shadow-emerald-950">
+                  <i class="fa-solid fa-shield-cat mr-1"></i> Şifreyi Güncelle
+                </button>
+              </form>
+            </div>
+
+            <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 space-y-4">
+              <h3 class="font-bold text-slate-100 text-base border-b border-slate-800 pb-3 flex items-center gap-2">
+                <i class="fa-solid fa-user-doctor text-cyan-400"></i> Sistem Bilgileri
+              </h3>
+              <div class="space-y-3 text-xs text-slate-300">
+                <div class="p-3 bg-slate-950 rounded-xl border border-slate-800 flex items-center justify-between">
+                  <span class="text-slate-400">Oturum Açan:</span>
+                  <span id="settings-info-name" class="font-bold text-white">Vet. Hekim Nihat İlhan</span>
+                </div>
+                <div class="p-3 bg-slate-950 rounded-xl border border-slate-800 flex items-center justify-between">
+                  <span class="text-slate-400">Destek Hattı:</span>
+                  <span class="font-mono font-bold text-emerald-400">0553 053 05 97</span>
+                </div>
+                <div class="p-3 bg-slate-950 rounded-xl border border-slate-800 flex items-center justify-between">
+                  <span class="text-slate-400">Sürüm:</span>
+                  <span class="font-bold text-purple-400">YAŞAMvet Farm Edition v4.0</span>
+                </div>
               </div>
             </div>
           </div>
@@ -1166,7 +1186,6 @@
 
   <!-- APPLICATION LOGIC & STATE ENGINE -->
   <script>
-    // HELPER DATE FUNCTIONS DEFINED FIRST
     function getTodayDateString() {
       return new Date().toISOString().split('T')[0];
     }
@@ -1177,92 +1196,43 @@
       return d.toISOString().split('T')[0];
     }
 
-    // INITIAL SEED DATA USING DATE HELPERS
-    const initialUsers = [
-      { id: 'u_admin', name: 'admin', pass: 'yasamvet', farmName: 'Genel Yönetici Mimarisi', role: 'admin', expireDate: '2030-12-31' },
-      { id: 'u_farm1', name: 'akbas_ciftlik', pass: '123456', farmName: 'Akbaş Süt Çiftliği', role: 'farm', expireDate: '2027-10-15' },
-      { id: 'u_farm2', name: 'gunes_hayvan', pass: '123456', farmName: 'Güneş Hayvancılık', role: 'farm', expireDate: getRelativeDateStr(-2) },
-      { id: 'u_farm3', name: 'yesil_vadi', pass: '123456', farmName: 'Yeşil Vadisi Besi İşletmesi', role: 'farm', expireDate: getRelativeDateStr(15) }
+    const initialTenants = [
+      { id: 't1', name: 'Akbaş Süt Çiftliği', tenantNo: 'TR-38-001', username: 'akbas', password: '123', expiresAt: getRelativeDateStr(365) }
     ];
 
     const initialAnimals = [
-      { 
-        id: 'a1', 
-        tag: 'TR3800129841', 
-        customCode: 'S-010', 
-        farmId: 'u_farm1', 
-        farmName: 'Akbaş Süt Çiftliği', 
-        type: 'Büyükbaş', 
-        breed: 'Holstein', 
-        gender: 'Dişi', 
-        birth: '2022-03-10', 
-        status: 'Sağmal İnek', 
-        category: 'Sağmal İnek',
-        city: 'Kayseri',
-        district: 'Develi',
-        neighborhood: 'Merkez',
-        owner: 'Ahmet Akbaş',
-        herdNo: 'SR-01',
-        mother: 'TR38000111'
-      },
-      { 
-        id: 'a2', 
-        tag: 'TR3800129842', 
-        customCode: 'S-011', 
-        farmId: 'u_farm1', 
-        farmName: 'Akbaş Süt Çiftliği', 
-        type: 'Büyükbaş', 
-        breed: 'Simental', 
-        gender: 'Dişi', 
-        birth: '2023-01-15', 
-        status: 'Gebe Düve', 
-        category: 'Gebe Düve',
-        city: 'Kayseri',
-        district: 'Develi',
-        neighborhood: 'Merkez',
-        owner: 'Ahmet Akbaş',
-        herdNo: 'SR-01',
-        mother: 'TR38000112'
-      }
+      { id: 'a1', tag: 'TR3800123456', customCode: 'S-001', type: 'Büyükbaş', breed: 'Holstein', gender: 'Dişi', birthDate: '2022-03-10', status: 'Sağmal İnek', city: 'Kayseri', district: 'Develi', neighborhood: 'Merkez', owner: 'Ahmet Yılmaz', herdNo: 'SR-01', motherTag: 'TR3800011111' },
+      { id: 'a2', tag: 'TR3800123457', customCode: 'S-002', type: 'Büyükbaş', breed: 'Simental', gender: 'Dişi', birthDate: '2021-05-15', status: 'Gebe Düve', city: 'Kayseri', district: 'Develi', neighborhood: 'Yeniköy', owner: 'Mehmet Demir', herdNo: 'SR-02', motherTag: 'TR3800011122' }
     ];
 
     const initialTreatments = [
-      { id: 't1', tag: 'TR3800129841', farmId: 'u_farm1', date: getTodayDateString(), diag: 'Akut Mastitis', med: 'Penstrep 20ml', withdrawalDays: 5, status: 'Devam ediyor' },
-      { id: 't2', tag: 'TR3800774129', farmId: 'u_farm2', date: '2026-03-22', diag: 'Tırnak Çürüğü', med: 'Oxytetracycline', withdrawalDays: 0, status: 'İyileşti' }
+      { id: 'tr1', tag: 'TR3800123456', date: getTodayDateString(), diagnoses: ['Akut Mastitis'], medications: ['Penstrep 20ml'], withdrawalDays: 5, withdrawalEnd: getRelativeDateStr(5), status: 'Devam ediyor' }
     ];
 
     const initialBreeding = [
-      { id: 'b1', tag: 'TR3800129841', farmId: 'u_farm1', type: 'Suni Tohumlama', date: '2026-02-10', bull: 'US-HOL-887', estBirth: '2026-11-20', result: 'Gebe (+)' },
-      { id: 'b2', tag: 'TR3800129842', farmId: 'u_farm1', type: 'Kızgınlık', date: '2026-04-01', bull: '-', estBirth: '-', result: 'Tohumlama Bekliyor' }
-    ];
-
-    const initialOestrus = [
-      { id: 'o1', tag: 'TR3800129842', farmId: 'u_farm1', protocol: 'Ovsynch (7 gün)', startDate: getTodayDateString() }
+      { id: 'b1', tag: 'TR3800123457', type: 'Suni Tohumlama', date: getTodayDateString(), bullCode: 'Holstein-09', estBirth: getRelativeDateStr(283), result: 'Gebe (+)' }
     ];
 
     const initialFinance = [
-      { id: 'fn1', farmId: 'u_farm1', type: 'Gelir', date: getTodayDateString(), cat: 'Süt Geliri', desc: 'Süt Fabrikası 1. Dönem Hakediş', amount: 48500 },
-      { id: 'fn2', farmId: 'u_farm1', type: 'Gider', date: '2026-04-02', cat: 'Yem & Rasyon', desc: 'Toplu Kesir Yem Alımı', amount: 16200 },
-      { id: 'fn3', farmId: 'u_farm3', type: 'Gelir', date: '2026-04-05', cat: 'Hayvan Satışı', desc: '2 Baş Tosun Satışı', amount: 95000 }
+      { id: 'f1', type: 'Gelir', date: getTodayDateString(), category: 'Süt Geliri', desc: 'Günlük 450 Lt Süt Satışı', amount: 6750 },
+      { id: 'f2', type: 'Gider', date: getTodayDateString(), category: 'Yem Gideri', desc: '1 Ton Süt Yemi', amount: 12500 }
     ];
 
     const initialPayments = [
-      { id: 'p1', farmId: 'u_farm1', title: 'Yem Fabrikası Vadesi', date: getRelativeDateStr(7), amount: 16200, type: 'Borç', status: 'Bekliyor' },
-      { id: 'p2', farmId: 'u_farm1', title: 'Süt Fabrikası Hakediş', date: getRelativeDateStr(12), amount: 48500, type: 'Alacak', status: 'Bekliyor' }
+      { id: 'p1', title: 'Yem Faturası Vadesi', type: 'Borç', date: getRelativeDateStr(7), amount: 12500, status: 'Bekliyor' }
     ];
 
     const initialAnnouncements = [
-      { id: 'an1', title: 'Bahar Dönemi Şap Aşısı Kampanyası', msg: 'Tüm çiftliklerimizin dikkatine: Bölgesel aşı takvimi gereğince sağmal ve gebe hayvanların aşılanması bu hafta içinde tamamlanacaktır.', date: getTodayDateString() }
+      { id: 'an1', title: 'Şap Aşısı Kampanyası', msg: 'İlçe Tarım Müdürlüğü tarafından bildirilen şap aşısı programı tüm işletmelerimiz için başlamıştır.', date: getTodayDateString() }
     ];
 
-    // APPLICATION STATE
     let state = {
-      activeUserId: localStorage.getItem('yasamvet_active_userid') || null,
-      users: JSON.parse(localStorage.getItem('yasamvet_users')) || initialUsers,
+      isLoggedIn: localStorage.getItem('yasamvet_logged') === 'true',
+      currentUser: JSON.parse(localStorage.getItem('yasamvet_user')) || null,
+      tenants: JSON.parse(localStorage.getItem('yasamvet_tenants')) || initialTenants,
       animals: JSON.parse(localStorage.getItem('yasamvet_animals')) || initialAnimals,
       treatments: JSON.parse(localStorage.getItem('yasamvet_treatments')) || initialTreatments,
       breeding: JSON.parse(localStorage.getItem('yasamvet_breeding')) || initialBreeding,
-      oestrus: JSON.parse(localStorage.getItem('yasamvet_oestrus')) || initialOestrus,
       finance: JSON.parse(localStorage.getItem('yasamvet_finance')) || initialFinance,
       payments: JSON.parse(localStorage.getItem('yasamvet_payments')) || initialPayments,
       announcements: JSON.parse(localStorage.getItem('yasamvet_announcements')) || initialAnnouncements
@@ -1270,320 +1240,284 @@
 
     let parsedExcelAnimals = [];
 
-    function getCurrentUser() {
-      return state.users.find(u => u.id === state.activeUserId) || null;
-    }
-
     function saveState() {
-      if (state.activeUserId) {
-        localStorage.setItem('yasamvet_active_userid', state.activeUserId);
-      }
-      localStorage.setItem('yasamvet_users', JSON.stringify(state.users));
+      localStorage.setItem('yasamvet_logged', state.isLoggedIn);
+      localStorage.setItem('yasamvet_user', JSON.stringify(state.currentUser));
+      localStorage.setItem('yasamvet_tenants', JSON.stringify(state.tenants));
       localStorage.setItem('yasamvet_animals', JSON.stringify(state.animals));
       localStorage.setItem('yasamvet_treatments', JSON.stringify(state.treatments));
       localStorage.setItem('yasamvet_breeding', JSON.stringify(state.breeding));
-      localStorage.setItem('yasamvet_oestrus', JSON.stringify(state.oestrus));
       localStorage.setItem('yasamvet_finance', JSON.stringify(state.finance));
       localStorage.setItem('yasamvet_payments', JSON.stringify(state.payments));
       localStorage.setItem('yasamvet_announcements', JSON.stringify(state.announcements));
-      
-      refreshAllViews();
     }
 
-    // LOGIN & AUTHENTICATION ENGINE
+    function showToast(msg, type = 'success') {
+      const container = document.getElementById('toast-container');
+      if (!container) return;
+      const t = document.createElement('div');
+      t.className = `px-4 py-3 rounded-2xl text-xs font-bold text-white shadow-xl pointer-events-auto transition-all flex items-center gap-2 ${
+        type === 'success' ? 'bg-emerald-600 shadow-emerald-950' : 'bg-rose-600 shadow-rose-950'
+      }`;
+      t.innerHTML = `<i class="fa-solid ${type === 'success' ? 'fa-circle-check' : 'fa-circle-exclamation'}"></i> ${msg}`;
+      container.appendChild(t);
+      setTimeout(() => {
+        t.style.opacity = '0';
+        setTimeout(() => t.remove(), 300);
+      }, 3000);
+    }
+
     function handleLoginSubmit(e) {
       e.preventDefault();
-      const usernameInput = document.getElementById('login-username').value.trim().toLowerCase();
-      const passwordInput = document.getElementById('login-password').value.trim();
+      const u = document.getElementById('login-username').value.trim();
+      const p = document.getElementById('login-password').value.trim();
 
-      const foundUser = state.users.find(u => u.name.toLowerCase() === usernameInput && u.pass === passwordInput);
-
-      if (!foundUser) {
-        showToast("Hatalı kullanıcı adı veya şifre!", "error");
+      if (u === 'nhtilhan' && p === '!?nhtilhan?!') {
+        state.isLoggedIn = true;
+        state.currentUser = { username: 'nhtilhan', name: 'Vet. Hekim Nihat İlhan', role: 'admin' };
+        saveState();
+        showToast("Hoş geldiniz, Vet. Hekim Nihat İlhan", "success");
+        checkAuthAndInit();
         return;
       }
 
-      state.activeUserId = foundUser.id;
-      localStorage.setItem('yasamvet_active_userid', foundUser.id);
-      
-      showToast(`Hoş geldiniz, ${foundUser.role === 'admin' ? 'Genel Yönetici' : foundUser.farmName}`, "success");
-      checkAuthAndInit();
-    }
+      const foundTenant = state.tenants.find(t => t.username.toLowerCase() === u.toLowerCase() && t.password === p);
+      if (foundTenant) {
+        const today = new Date().toISOString().split('T')[0];
+        if (foundTenant.expiresAt && foundTenant.expiresAt < today) {
+          showToast("Bu işletmenin lisans süresi dolmuştur!", "error");
+          return;
+        }
+        state.isLoggedIn = true;
+        state.currentUser = { username: foundTenant.username, name: foundTenant.name, role: 'tenant' };
+        saveState();
+        showToast(`Hoş geldiniz, ${foundTenant.name}`, "success");
+        checkAuthAndInit();
+        return;
+      }
 
-    function fillDemoCredentials(user, pass) {
-      document.getElementById('login-username').value = user;
-      document.getElementById('login-password').value = pass;
+      showToast("Hatalı kullanıcı adı veya şifre!", "error");
     }
 
     function handleLogout() {
-      state.activeUserId = null;
-      localStorage.removeItem('yasamvet_active_userid');
+      state.isLoggedIn = false;
+      state.currentUser = null;
+      saveState();
       checkAuthAndInit();
-      showToast("Güvenli çıkış yapıldı", "info");
+      showToast("Oturum kapatıldı.", "success");
     }
 
     function checkAuthAndInit() {
       const loginScreen = document.getElementById('login-screen');
       const mainApp = document.getElementById('main-app-container');
-      const lockScreen = document.getElementById('expired-lock-screen');
 
-      const user = getCurrentUser();
+      if (state.isLoggedIn && state.currentUser) {
+        if (loginScreen) loginScreen.classList.add('hidden');
+        if (mainApp) mainApp.classList.remove('hidden');
 
-      if (!user) {
-        loginScreen.classList.remove('hidden');
-        mainApp.classList.add('hidden');
-        lockScreen.classList.add('hidden');
-        return;
-      }
+        const userNameEl = document.getElementById('sidebar-user-name');
+        const userRoleEl = document.getElementById('sidebar-user-role');
+        const userAvatarEl = document.getElementById('sidebar-user-avatar');
+        const settingsNameEl = document.getElementById('settings-info-name');
 
-      const isExpired = user.role !== 'admin' && getDaysDiff(user.expireDate) < 0;
-      if (isExpired) {
-        loginScreen.classList.add('hidden');
-        mainApp.classList.add('hidden');
-        lockScreen.classList.remove('hidden');
-        return;
-      }
+        if (userNameEl) userNameEl.innerText = state.currentUser.name;
+        if (userRoleEl) userRoleEl.innerText = state.currentUser.role === 'admin' ? 'Genel Yönetici' : 'İşletme Yetkilisi';
+        if (userAvatarEl) userAvatarEl.innerText = state.currentUser.name.charAt(0).toUpperCase();
+        if (settingsNameEl) settingsNameEl.innerText = state.currentUser.name;
 
-      loginScreen.classList.add('hidden');
-      lockScreen.classList.add('hidden');
-      mainApp.classList.remove('hidden');
+        document.querySelectorAll('.admin-only').forEach(el => {
+          if (state.currentUser.role !== 'admin') el.classList.add('hidden');
+          else el.classList.remove('hidden');
+        });
 
-      refreshAllViews();
-      switchView('dashboard');
-    }
-
-    function resetToSampleData() {
-      if (confirm("Tüm veriler varsayılan çiftlik verilerine sıfırlansın mı?")) {
-        localStorage.clear();
-        state = {
-          activeUserId: null,
-          users: [...initialUsers],
-          animals: [...initialAnimals],
-          treatments: [...initialTreatments],
-          breeding: [...initialBreeding],
-          oestrus: [...initialOestrus],
-          finance: [...initialFinance],
-          payments: [...initialPayments],
-          announcements: [...initialAnnouncements]
-        };
-        saveState();
-        checkAuthAndInit();
-        showToast("Veriler sıfırlandı", "info");
+        renderAllViews();
+        switchView('dashboard');
+      } else {
+        if (loginScreen) loginScreen.classList.remove('hidden');
+        if (mainApp) mainApp.classList.add('hidden');
       }
     }
 
-    function formatDateTR(dateStr) {
-      if (!dateStr || dateStr === '-') return '-';
-      const d = new Date(dateStr);
-      if (isNaN(d)) return dateStr;
-      return d.toLocaleDateString('tr-TR', { day: '2-digit', month: '2-digit', year: 'numeric' });
-    }
-
-    function formatCurrency(num) {
-      return '₺' + Number(num || 0).toLocaleString('tr-TR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-    }
-
-    function getDaysDiff(dateStr) {
-      if (!dateStr) return 0;
-      const target = new Date(dateStr);
-      const today = new Date(getTodayDateString());
-      const diffTime = target - today;
-      return Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-    }
-
-    function showToast(message, type = 'success') {
-      const container = document.getElementById('toast-container');
-      const toast = document.createElement('div');
-      
-      const colors = {
-        success: 'bg-emerald-900/90 border-emerald-500 text-emerald-100',
-        info: 'bg-blue-900/90 border-blue-500 text-blue-100',
-        warning: 'bg-amber-900/90 border-amber-500 text-amber-100',
-        error: 'bg-rose-900/90 border-rose-500 text-rose-100'
-      };
-
-      toast.className = `px-4 py-3 rounded-xl border ${colors[type] || colors.success} text-xs font-bold shadow-2xl flex items-center gap-2 transform transition-all duration-300 translate-y-2 opacity-0 pointer-events-auto`;
-      toast.innerHTML = `<i class="fa-solid fa-circle-check"></i> <span>${message}</span>`;
-      
-      container.appendChild(toast);
-      setTimeout(() => toast.classList.remove('translate-y-2', 'opacity-0'), 10);
-      setTimeout(() => {
-        toast.classList.add('opacity-0', 'translate-y-2');
-        setTimeout(() => toast.remove(), 300);
-      }, 3500);
+    function toggleSidebar() {
+      const sidebar = document.getElementById('sidebar');
+      const backdrop = document.getElementById('sidebar-backdrop');
+      if (sidebar) sidebar.classList.toggle('-translate-x-full');
+      if (backdrop) backdrop.classList.toggle('hidden');
     }
 
     function switchView(viewId) {
       document.querySelectorAll('.view-section').forEach(sec => sec.classList.add('hidden'));
       document.querySelectorAll('.nav-btn').forEach(btn => {
-        btn.classList.remove('text-emerald-400', 'bg-emerald-500/10', 'border', 'border-emerald-500/20');
+        btn.classList.remove('active', 'text-emerald-400', 'bg-emerald-500/10', 'border', 'border-emerald-500/20');
         btn.classList.add('text-slate-400');
       });
 
       const targetSec = document.getElementById(`view-${viewId}`);
-      if (targetSec) targetSec.classList.remove('hidden');
-
       const targetBtn = document.getElementById(`nav-${viewId}`);
+
+      if (targetSec) targetSec.classList.remove('hidden');
       if (targetBtn) {
+        targetBtn.classList.add('active', 'text-emerald-400', 'bg-emerald-500/10', 'border', 'border-emerald-500/20');
         targetBtn.classList.remove('text-slate-400');
-        targetBtn.classList.add('text-emerald-400', 'bg-emerald-500/10', 'border', 'border-emerald-500/20');
       }
 
-      document.getElementById('sidebar').classList.add('-translate-x-full');
-      document.getElementById('sidebar-backdrop').classList.add('hidden');
+      if (window.innerWidth < 1024) {
+        const sidebar = document.getElementById('sidebar');
+        const backdrop = document.getElementById('sidebar-backdrop');
+        if (sidebar && !sidebar.classList.contains('-translate-x-full')) {
+          sidebar.classList.add('-translate-x-full');
+          if (backdrop) backdrop.classList.add('hidden');
+        }
+      }
     }
 
-    function toggleSidebar() {
-      document.getElementById('sidebar').classList.toggle('-translate-x-full');
-      document.getElementById('sidebar-backdrop').classList.toggle('hidden');
-    }
-
-    function filterByCurrentRole(list, farmIdProp = 'farmId') {
-      const user = getCurrentUser();
-      if (!user || user.role === 'admin') return list;
-      return list.filter(item => item[farmIdProp] === user.id);
-    }
-
-    function refreshAllViews() {
-      const currentUser = getCurrentUser();
-      if (!currentUser) return;
-
-      renderUserProfileSide();
-      renderDashboardSummary();
-      renderUsersAdminTable();
+    function renderAllViews() {
+      renderDashboard();
+      renderTenantsTable();
       renderAnimalsTable();
       renderTreatmentsTable();
       renderBreedingTable();
-      renderOestrusSection();
       renderFinanceTable();
       renderPaymentsTable();
       renderAnnouncementsFeed();
-      populateFarmSelects();
+      populateAnimalDropdowns();
     }
 
-    function renderUserProfileSide() {
-      const currentUser = getCurrentUser();
-      if (!currentUser) return;
-
-      document.getElementById('user-display-name').innerText = currentUser.role === 'admin' ? 'Nihat İlhan' : currentUser.farmName;
-      document.getElementById('user-display-role').innerText = currentUser.role === 'admin' ? 'Genel Yönetici' : `Çiftlik Hesabı`;
-      document.getElementById('user-avatar').innerText = currentUser.role === 'admin' ? 'Nİ' : currentUser.farmName.substring(0, 2).toUpperCase();
-
-      const adminMenu = document.getElementById('admin-only-menu');
-      if (currentUser.role === 'admin') adminMenu.classList.remove('hidden');
-      else adminMenu.classList.add('hidden');
-
-      const annCard = document.getElementById('announcement-create-card');
-      const annFeed = document.getElementById('announcement-feed-wrapper');
-      if (currentUser.role === 'admin') {
-        annCard.classList.remove('hidden');
-        annFeed.className = 'lg:col-span-2 space-y-4';
-      } else {
-        annCard.classList.add('hidden');
-        annFeed.className = 'lg:col-span-3 space-y-4';
-      }
-    }
-
-    function renderDashboardSummary() {
-      const animals = filterByCurrentRole(state.animals);
-      const treatments = filterByCurrentRole(state.treatments);
-      const oestrus = filterByCurrentRole(state.oestrus);
-      const finance = filterByCurrentRole(state.finance);
-
-      const milkingCount = animals.filter(a => (a.status || a.category) === 'Sağmal İnek').length;
-      const activeTreatmentsCount = treatments.filter(t => t.status === 'Devam ediyor').length;
-
-      document.getElementById('kpi-animals').innerText = animals.length;
-      document.getElementById('kpi-milking').innerText = milkingCount;
-      document.getElementById('kpi-treatments').innerText = activeTreatmentsCount;
-      document.getElementById('kpi-oestrus').innerText = oestrus.length;
-
-      document.getElementById('badge-animals-count').innerText = `${animals.length} baş`;
-      document.getElementById('badge-treatments-active').innerText = `${activeTreatmentsCount} aktif`;
-      document.getElementById('badge-oestrus-count').innerText = `${oestrus.length} aktif`;
-
-      let income = 0, expense = 0;
-      finance.forEach(f => {
-        const amt = parseFloat(f.amount || 0);
-        if (f.type === 'Gelir') income += amt;
-        else if (f.type === 'Gider') expense += amt;
+    function renderDashboard() {
+      const animCount = state.animals.length;
+      const activeTreatCount = state.treatments.filter(t => t.status === 'Devam ediyor').length;
+      
+      let totalInc = 0, totalExp = 0;
+      state.finance.forEach(f => {
+        if (f.type === 'Gelir') totalInc += Number(f.amount);
+        else totalExp += Number(f.amount);
       });
-      const net = income - expense;
+      const netBal = totalInc - totalExp;
 
-      document.getElementById('kpi-income').innerText = formatCurrency(income);
-      document.getElementById('kpi-expense').innerText = formatCurrency(expense);
-      document.getElementById('kpi-net').innerText = formatCurrency(net);
-      document.getElementById('kpi-net').className = `text-xl font-black mt-1 ${net >= 0 ? 'text-emerald-400' : 'text-rose-400'}`;
+      const kpiAnim = document.getElementById('kpi-animals-count');
+      const kpiTreat = document.getElementById('kpi-treatments-active');
+      const kpiInc = document.getElementById('kpi-total-income');
+      const kpiExp = document.getElementById('kpi-total-expense');
+      const kpiBal = document.getElementById('kpi-net-balance');
 
-      const activeWithdrawals = treatments.filter(t => {
-        if (t.status !== 'Devam ediyor' || !t.withdrawalDays) return false;
-        const startDate = new Date(t.date);
-        const endDate = new Date(startDate);
-        endDate.setDate(endDate.getDate() + parseInt(t.withdrawalDays));
-        return endDate >= new Date(getTodayDateString());
-      });
+      if (kpiAnim) kpiAnim.innerText = `${animCount} Baş`;
+      if (kpiTreat) kpiTreat.innerText = `${activeTreatCount} Devam`;
+      if (kpiInc) kpiInc.innerText = `₺${totalInc.toLocaleString('tr-TR', {minimumFractionDigits: 2})}`;
+      if (kpiExp) kpiExp.innerText = `₺${totalExp.toLocaleString('tr-TR', {minimumFractionDigits: 2})}`;
+      if (kpiBal) kpiBal.innerText = `₺${netBal.toLocaleString('tr-TR', {minimumFractionDigits: 2})}`;
 
-      const warnBanner = document.getElementById('withdrawal-alert-banner');
-      const warnText = document.getElementById('withdrawal-alert-text');
+      const badgeTenants = document.getElementById('badge-tenants-count');
+      const badgeAnimals = document.getElementById('badge-animals-count');
+      const badgeTreatments = document.getElementById('badge-treatments-active');
 
-      if (activeWithdrawals.length > 0) {
-        warnBanner.classList.remove('hidden');
-        const tags = activeWithdrawals.map(w => `${w.tag} (${w.med || 'İlaç'}, ${w.withdrawalDays} gün süt bekleme süresi)`).join(', ');
-        warnText.innerHTML = `Süt dökümü / tank ayrımı gereken hayvanlar: <strong>${tags}</strong>.`;
-      } else {
-        warnBanner.classList.add('hidden');
-      }
+      if (badgeTenants) badgeTenants.innerText = state.tenants.length;
+      if (badgeAnimals) badgeAnimals.innerText = state.animals.length;
+      if (badgeTreatments) badgeTreatments.innerText = activeTreatCount;
 
-      const currentUser = getCurrentUser();
-      document.getElementById('dash-role-pill').innerText = currentUser.role === 'admin' ? 'GENEL YÖNETİCİ GÖRÜNÜMÜ' : `ÇİFTLİK HESABI: ${currentUser.farmName.toUpperCase()}`;
-
-      filterDashAnimals();
+      renderDashAnimalsTable('');
     }
 
-    function filterDashAnimals() {
-      const query = (document.getElementById('dash-search-input').value || '').toLowerCase();
-      const animals = filterByCurrentRole(state.animals);
+    function renderDashAnimalsTable(filter = '') {
       const tbody = document.getElementById('dash-animal-table');
+      if (!tbody) return;
+      tbody.innerHTML = '';
 
-      const filtered = animals.filter(a =>
-        a.tag.toLowerCase().includes(query) ||
-        (a.customCode && a.customCode.toLowerCase().includes(query)) ||
-        (a.herdNo && a.herdNo.toLowerCase().includes(query)) ||
-        (a.status && a.status.toLowerCase().includes(query)) ||
-        (a.breed && a.breed.toLowerCase().includes(query)) ||
-        (a.city && a.city.toLowerCase().includes(query)) ||
-        (a.district && a.district.toLowerCase().includes(query))
+      const filtered = state.animals.filter(a => 
+        a.tag.toLowerCase().includes(filter.toLowerCase()) ||
+        (a.customCode && a.customCode.toLowerCase().includes(filter.toLowerCase())) ||
+        (a.herdNo && a.herdNo.toLowerCase().includes(filter.toLowerCase())) ||
+        a.breed.toLowerCase().includes(filter.toLowerCase())
       );
 
       if (filtered.length === 0) {
-        tbody.innerHTML = `<tr><td colspan="7" class="text-center py-4 text-xs text-slate-500">Çiftlikte eşleşen hayvan kaydı bulunamadı.</td></tr>`;
+        tbody.innerHTML = `<tr><td colspan="7" class="text-center py-6 text-slate-500 text-xs">Kayıtlı hayvan bulunamadı.</td></tr>`;
         return;
       }
 
-      tbody.innerHTML = filtered.map(a => `
-        <tr class="hover:bg-slate-800/40 transition-colors">
-          <td class="py-2.5 px-3 font-mono font-bold text-emerald-400">${a.tag}</td>
-          <td class="py-2.5 px-3 font-semibold text-emerald-200">${a.customCode || '-'}</td>
-          <td class="py-2.5 px-3 text-xs text-slate-300 font-mono">${a.herdNo || '-'}</td>
-          <td class="py-2.5 px-3">
-            <span class="text-xs text-slate-200">${a.type || 'Büyükbaş'} / ${a.breed}</span>
-            <span class="ml-1 text-[10px] px-1.5 py-0.5 rounded ${a.gender === 'Dişi' ? 'bg-pink-500/20 text-pink-300' : 'bg-blue-500/20 text-blue-300'}">${a.gender}</span>
-          </td>
-          <td class="py-2.5 px-3 font-semibold text-white">${a.status || a.category || 'Sağmal İnek'}</td>
-          <td class="py-2.5 px-3 text-xs text-slate-400">${a.city || '-'}${a.district ? ' / ' + a.district : ''}</td>
-          <td class="py-2.5 px-3 text-right">
-            <button onclick="quickTreatment('${a.tag}')" class="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs text-slate-200 transition-colors">
-              <i class="fa-solid fa-kit-medical text-amber-400 mr-1"></i> İlaç / Tedavi
+      filtered.forEach(a => {
+        const tr = document.createElement('tr');
+        tr.className = 'hover:bg-slate-900/50 transition-colors';
+        tr.innerHTML = `
+          <td class="py-3 px-3 font-mono font-bold text-emerald-400">${a.tag}</td>
+          <td class="py-3 px-3 font-semibold text-white">${a.customCode || '-'}</td>
+          <td class="py-3 px-3">${a.herdNo || '-'}</td>
+          <td class="py-3 px-3">${a.type} / ${a.breed} / ${a.gender}</td>
+          <td class="py-3 px-3"><span class="px-2 py-0.5 rounded-full bg-slate-800 text-slate-300 text-xs">${a.status}</span></td>
+          <td class="py-3 px-3 text-xs text-slate-400">${a.city || ''} ${a.district || ''} (${a.owner || 'İşletme'})</td>
+          <td class="py-3 px-3 text-right">
+            <button onclick="switchView('treatments')" class="px-2.5 py-1 rounded-lg bg-amber-500/10 text-amber-400 hover:bg-amber-500/20 text-xs font-bold transition-all">
+              <i class="fa-solid fa-kit-medical mr-1"></i> Tedavi
             </button>
           </td>
-        </tr>
-      `).join('');
+        `;
+        tbody.appendChild(tr);
+      });
     }
 
-    function quickTreatment(tag) {
-      switchView('treatments');
-      document.getElementById('treat-tag').value = tag;
-      showToast(`${tag} için tedavi kaydı formu açıldı.`, 'info');
+    function filterDashAnimals() {
+      const q = document.getElementById('dash-search-input').value;
+      renderDashAnimalsTable(q);
+    }
+
+    function handleAddTenant(e) {
+      e.preventDefault();
+      const name = document.getElementById('tenant-name').value.trim();
+      const tenantNo = document.getElementById('tenant-no').value.trim();
+      const username = document.getElementById('tenant-username').value.trim();
+      const password = document.getElementById('tenant-password').value.trim();
+      const expiresAt = document.getElementById('tenant-expires').value;
+
+      state.tenants.push({ id: 't_' + Date.now(), name, tenantNo, username, password, expiresAt });
+      saveState();
+      renderTenantsTable();
+      renderDashboard();
+      document.getElementById('form-add-tenant').reset();
+      showToast("İşletme ve abonelik başarıyla kaydedildi!", "success");
+    }
+
+    function renderTenantsTable() {
+      const tbody = document.getElementById('tenants-table-body');
+      if (!tbody) return;
+      tbody.innerHTML = '';
+
+      if (state.tenants.length === 0) {
+        tbody.innerHTML = `<tr><td colspan="5" class="text-center py-6 text-slate-500 text-xs">Kayıtlı işletme bulunamadı.</td></tr>`;
+        return;
+      }
+
+      const today = new Date().toISOString().split('T')[0];
+
+      state.tenants.forEach(t => {
+        const isExpired = t.expiresAt && t.expiresAt < today;
+        const tr = document.createElement('tr');
+        tr.className = 'hover:bg-slate-900/50 transition-colors';
+        tr.innerHTML = `
+          <td class="py-3 px-3 font-bold text-white">${t.name} <br><span class="text-[10px] text-slate-400 font-normal">${t.tenantNo || ''}</span></td>
+          <td class="py-3 px-3 font-mono text-xs text-emerald-400">K: ${t.username} <br>Ş: ${t.password}</td>
+          <td class="py-3 px-3 text-xs ${isExpired ? 'text-rose-400 font-bold' : 'text-slate-300'}">${t.expiresAt || '-'}</td>
+          <td class="py-3 px-3">
+            <span class="px-2.5 py-1 rounded-full text-xs font-bold ${isExpired ? 'bg-rose-500/20 text-rose-400 border border-rose-500/30' : 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/30'}">
+              ${isExpired ? 'Süresi Doldu' : 'Aktif Lisans'}
+            </span>
+          </td>
+          <td class="py-3 px-3 text-right">
+            <button onclick="deleteTenant('${t.id}')" class="p-1.5 rounded-lg bg-rose-500/10 text-rose-400 hover:bg-rose-500/20 transition-all">
+              <i class="fa-solid fa-trash text-xs"></i>
+            </button>
+          </td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
+    function deleteTenant(id) {
+      if (confirm("Bu işletmeyi silmek istediğinize emin misiniz?")) {
+        state.tenants = state.tenants.filter(t => t.id !== id);
+        saveState();
+        renderTenantsTable();
+        renderDashboard();
+        showToast("İşletme silindi.", "success");
+      }
     }
 
     function setAnimalSubTab(tab) {
@@ -1593,30 +1527,107 @@
       const panelSingle = document.getElementById('panel-animal-single');
 
       if (tab === 'excel') {
-        btnExcel.className = 'px-3 py-1.5 rounded-lg text-xs font-bold transition-all text-emerald-400 bg-emerald-500/10 border border-emerald-500/30 flex items-center gap-1.5';
-        btnSingle.className = 'px-3 py-1.5 rounded-lg text-xs font-bold transition-all text-slate-400 hover:text-white flex items-center gap-1.5';
-        panelExcel.classList.remove('hidden');
-        panelSingle.classList.add('hidden');
+        if (btnExcel) { btnExcel.className = "px-3 py-1.5 rounded-lg text-xs font-bold transition-all text-emerald-400 bg-emerald-500/10 border border-emerald-500/30 flex items-center gap-1.5"; }
+        if (btnSingle) { btnSingle.className = "px-3 py-1.5 rounded-lg text-xs font-bold transition-all text-slate-400 hover:text-white flex items-center gap-1.5"; }
+        if (panelExcel) panelExcel.classList.remove('hidden');
+        if (panelSingle) panelSingle.classList.add('hidden');
       } else {
-        btnSingle.className = 'px-3 py-1.5 rounded-lg text-xs font-bold transition-all text-emerald-400 bg-emerald-500/10 border border-emerald-500/30 flex items-center gap-1.5';
-        btnExcel.className = 'px-3 py-1.5 rounded-lg text-xs font-bold transition-all text-slate-400 hover:text-white flex items-center gap-1.5';
-        panelSingle.classList.remove('hidden');
-        panelExcel.classList.add('hidden');
+        if (btnSingle) { btnSingle.className = "px-3 py-1.5 rounded-lg text-xs font-bold transition-all text-emerald-400 bg-emerald-500/10 border border-emerald-500/30 flex items-center gap-1.5"; }
+        if (btnExcel) { btnExcel.className = "px-3 py-1.5 rounded-lg text-xs font-bold transition-all text-slate-400 hover:text-white flex items-center gap-1.5"; }
+        if (panelSingle) panelSingle.classList.remove('hidden');
+        if (panelExcel) panelExcel.classList.add('hidden');
+      }
+    }
+
+    function handleAddAnimal(e) {
+      e.preventDefault();
+      const tag = document.getElementById('animal-tag').value.trim();
+      const customCode = document.getElementById('animal-custom-code').value.trim();
+      const type = document.getElementById('animal-type').value;
+      const breed = document.getElementById('animal-breed').value;
+      const gender = document.getElementById('animal-gender').value;
+      const birthDate = document.getElementById('animal-birth').value;
+      const status = document.getElementById('animal-status').value;
+      const city = document.getElementById('animal-city').value.trim();
+      const district = document.getElementById('animal-district').value.trim();
+      const neighborhood = document.getElementById('animal-neighborhood').value.trim();
+      const owner = document.getElementById('animal-owner').value.trim();
+      const herdNo = document.getElementById('animal-herdno').value.trim();
+      const motherTag = document.getElementById('animal-mother').value.trim();
+
+      state.animals.push({ id: 'a_' + Date.now(), tag, customCode, type, breed, gender, birthDate, status, city, district, neighborhood, owner, herdNo, motherTag });
+      saveState();
+      renderAnimalsTable();
+      renderDashboard();
+      populateAnimalDropdowns();
+      document.getElementById('form-add-animal').reset();
+      showToast("Hayvan başarıyla kaydedildi!", "success");
+    }
+
+    function renderAnimalsTable() {
+      const tbody = document.getElementById('animals-table-body');
+      const badge = document.getElementById('animals-total-badge');
+      const filterInput = document.getElementById('animal-filter-input');
+      const filter = filterInput ? filterInput.value.toLowerCase() : '';
+
+      if (!tbody) return;
+      tbody.innerHTML = '';
+
+      const filtered = state.animals.filter(a => 
+        a.tag.toLowerCase().includes(filter) ||
+        (a.customCode && a.customCode.toLowerCase().includes(filter)) ||
+        (a.herdNo && a.herdNo.toLowerCase().includes(filter)) ||
+        a.breed.toLowerCase().includes(filter)
+      );
+
+      if (badge) badge.innerText = `${filtered.length} baş`;
+
+      if (filtered.length === 0) {
+        tbody.innerHTML = `<tr><td colspan="7" class="text-center py-6 text-slate-500 text-xs">Kayıtlı hayvan bulunamadı.</td></tr>`;
+        return;
+      }
+
+      filtered.forEach(a => {
+        const tr = document.createElement('tr');
+        tr.className = 'hover:bg-slate-900/50 transition-colors';
+        tr.innerHTML = `
+          <td class="py-3 px-3 font-mono font-bold text-emerald-400">${a.tag}</td>
+          <td class="py-3 px-3 font-semibold text-white">${a.customCode || '-'}</td>
+          <td class="py-3 px-3">${a.type} / ${a.breed}</td>
+          <td class="py-3 px-3"><span class="px-2 py-0.5 rounded-full bg-slate-800 text-slate-300 text-xs">${a.status}</span></td>
+          <td class="py-3 px-3 text-xs text-slate-400">${a.city || ''} ${a.district || ''} (${a.owner || 'İşletme'})</td>
+          <td class="py-3 px-3">${a.herdNo || '-'}</td>
+          <td class="py-3 px-3 text-right">
+            <button onclick="deleteAnimal('${a.id}')" class="p-1.5 rounded-lg bg-rose-500/10 text-rose-400 hover:bg-rose-500/20 transition-all">
+              <i class="fa-solid fa-trash text-xs"></i>
+            </button>
+          </td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
+    function deleteAnimal(id) {
+      if (confirm("Bu hayvan kaydını silmek istediğinize emin misiniz?")) {
+        state.animals = state.animals.filter(a => a.id !== id);
+        saveState();
+        renderAnimalsTable();
+        renderDashboard();
+        populateAnimalDropdowns();
+        showToast("Hayvan silindi.", "success");
       }
     }
 
     function downloadSampleExcel() {
-      const sampleHeaders = [
-        ["Küpe Numarası", "Tür", "Irk", "Cinsiyet", "Doğum Tarihi", "Durumu", "İl", "İlçe", "Mahalle", "İşletme Sahibi Kişi/Firma", "Bulunduğu İşletme", "Anne Küpe Numarası", "Sürü No", "Çiftlik İçi Özel No"],
-        ["TR3800998811", "Büyükbaş", "Holstein", "Dişi", "2023-05-12", "Sağmal İnek", "Kayseri", "Develi", "Zile", "Ahmet Yılmaz", "Akbaş Süt Çiftliği", "TR38000101", "SR-01", "S-055"],
-        ["TR3800998812", "Büyükbaş", "Simental", "Dişi", "2023-08-20", "Gebe Düve", "Kayseri", "Develi", "Merkez", "Ahmet Yılmaz", "Akbaş Süt Çiftliği", "TR38000105", "SR-01", "Sarıkız-2"]
-      ];
-
-      const ws = XLSX.utils.aoa_to_sheet(sampleHeaders);
       const wb = XLSX.utils.book_new();
-      XLSX.utils.book_append_sheet(wb, ws, "Sürü Listesi");
-      XLSX.writeFile(wb, "YASAMvet_Suru_Yukleme_Sablonu.xlsx");
-      showToast("Örnek Excel şablonu indirildi", "info");
+      const sampleData = [
+        ["Küpe Numarası", "Tür", "Irk", "Cinsiyet", "Doğum Tarihi", "Durumu", "İl", "İlçe", "Mahalle", "İşletme Sahibi", "İşletme Adı", "Anne Küpe Numarası", "Sürü No", "Çiftlik İçi Özel No"],
+        ["TR3800998877", "Büyükbaş", "Holstein", "Dişi", "2022-01-10", "Sağmal İnek", "Kayseri", "Develi", "Merkez", "Ahmet Yılmaz", "Akbaş Süt Çiftliği", "TR3800011122", "SR-01", "S-101"],
+        ["TR3800998878", "Büyükbaş", "Simental", "Dişi", "2021-06-15", "Gebe Düve", "Kayseri", "Develi", "Merkez", "Ahmet Yılmaz", "Akbaş Süt Çiftliği", "TR3800011133", "SR-01", "S-102"]
+      ];
+      const ws = XLSX.utils.aoa_to_sheet(sampleData);
+      XLSX.utils.book_append_sheet(wb, ws, "Hayvanlar");
+      XLSX.writeFile(wb, "Yasamvet_Hayvan_Sablonu.xlsx");
     }
 
     function handleExcelFile(e) {
@@ -1630,398 +1641,193 @@
           const workbook = XLSX.read(data, { type: 'array' });
           const firstSheetName = workbook.SheetNames[0];
           const worksheet = workbook.Sheets[firstSheetName];
-          const jsonRows = XLSX.utils.sheet_to_json(worksheet, { defval: "" });
+          const json = XLSX.utils.sheet_to_json(worksheet, { header: 1 });
 
-          if (!jsonRows || jsonRows.length === 0) {
-            showToast("Excel dosyasında veri bulunamadı!", "error");
+          if (json.length < 2) {
+            showToast("Excel dosyası boş veya hatalı formatta!", "error");
             return;
           }
 
-          const currentUser = getCurrentUser();
+          parsedExcelAnimals = [];
 
-          parsedExcelAnimals = jsonRows.map((row, idx) => {
-            const getVal = (possibleKeys) => {
-              for (const k of possibleKeys) {
-                const found = Object.keys(row).find(rk => rk.trim().toLowerCase() === k.toLowerCase());
-                if (found && row[found] !== undefined) return String(row[found]).trim();
-              }
-              return '';
-            };
+          for (let i = 1; i < json.length; i++) {
+            const row = json[i];
+            if (!row || row.length === 0) continue;
+            const tag = row[0] ? String(row[0]).trim() : '';
+            if (!tag) continue;
 
-            return {
-              id: 'a_ex_' + Date.now() + '_' + idx,
-              tag: getVal(['Küpe Numarası', 'Küpe No', 'Tag', 'TagNo', 'Küpe']),
-              customCode: getVal(['Çiftlik İçi Özel No', 'Çiftlik İçi No', 'Özel No', 'Çiftlik Kodu', 'Özel Kod', 'İsim']),
-              type: getVal(['Tür', 'Türü', 'Type']) || 'Büyükbaş',
-              breed: getVal(['Irk', 'Irkı', 'Breed']) || 'Holstein',
-              gender: getVal(['Cinsiyet', 'Cinsiyeti', 'Gender']) || 'Dişi',
-              birth: getVal(['Doğum Tarihi', 'DoğumTarihi', 'BirthDate']),
-              status: getVal(['Durumu', 'Durum', 'Kategori']) || 'Sağmal İnek',
-              category: getVal(['Durumu', 'Durum', 'Kategori']) || 'Sağmal İnek',
-              city: getVal(['İl', 'Sehir']),
-              district: getVal(['İlçe', 'Ilce']),
-              neighborhood: getVal(['Mahalle', 'Semt']),
-              owner: getVal(['İşletme Sahibi Kişi/Firma', 'İşletme Sahibi', 'Sahibi', 'Firma']),
-              farmName: getVal(['Bulunduğu İşletme', 'İşletme Adı', 'Çiftlik']) || currentUser.farmName,
-              farmId: currentUser.id,
-              mother: getVal(['Anne Küpe Numarası', 'Anne Küpe No', 'Anne Küpe']),
-              herdNo: getVal(['Sürü No', 'SürüNo', 'Sürü'])
-            };
-          }).filter(a => a.tag !== '');
-
-          if (parsedExcelAnimals.length === 0) {
-            showToast("Geçerli küpe numarası olan hayvan kaydı okunamadı.", "warning");
-            return;
+            parsedExcelAnimals.push({
+              id: 'ex_' + Date.now() + '_' + i,
+              tag: tag,
+              type: row[1] || 'Büyükbaş',
+              breed: row[2] || 'Holstein',
+              gender: row[3] || 'Dişi',
+              birthDate: row[4] || getTodayDateString(),
+              status: row[5] || 'Sağmal İnek',
+              city: row[6] || '',
+              district: row[7] || '',
+              neighborhood: row[8] || '',
+              owner: row[9] || '',
+              herdNo: row[12] || '',
+              customCode: row[13] || ''
+            });
           }
 
-          renderExcelPreviewTable();
-          showToast(`${parsedExcelAnimals.length} baş hayvan Excel'den okundu.`, "success");
+          if (parsedExcelAnimals.length > 0) {
+            document.getElementById('excel-preview-box').classList.remove('hidden');
+            document.getElementById('parsed-count-badge').innerText = `${parsedExcelAnimals.length} Hayvan`;
+            
+            const previewTbody = document.getElementById('excel-preview-tbody');
+            previewTbody.innerHTML = '';
+            parsedExcelAnimals.slice(0, 5).forEach(pa => {
+              previewTbody.innerHTML += `<tr>
+                <td class="p-2 font-mono text-emerald-400">${pa.tag}</td>
+                <td class="p-2">${pa.customCode || '-'}</td>
+                <td class="p-2">${pa.type} / ${pa.breed}</td>
+                <td class="p-2">${pa.gender}</td>
+                <td class="p-2">${pa.status}</td>
+              </tr>`;
+            });
+            document.getElementById('excel-import-preview-table-container').classList.remove('hidden');
+            showToast(`${parsedExcelAnimals.length} hayvan başarıyla okundu.`, "success");
+          } else {
+            showToast("Excel dosyasında geçerli küpe numarası bulunamadı.", "error");
+          }
         } catch (err) {
           console.error(err);
-          showToast("Excel dosyası okunurken hata oluştu!", "error");
+          showToast("Excel dosyası okunurken hata oluştu.", "error");
         }
       };
       reader.readAsArrayBuffer(file);
     }
 
-    function renderExcelPreviewTable() {
-      const container = document.getElementById('excel-import-preview-table-container');
-      const tbody = document.getElementById('excel-preview-tbody');
-      const box = document.getElementById('excel-preview-box');
-      const badge = document.getElementById('parsed-count-badge');
-
-      container.classList.remove('hidden');
-      box.classList.remove('hidden');
-      badge.innerText = `${parsedExcelAnimals.length} Hayvan Okundu`;
-
-      tbody.innerHTML = parsedExcelAnimals.map(a => `
-        <tr>
-          <td class="p-2 font-mono font-bold text-emerald-400">${a.tag}</td>
-          <td class="p-2 font-semibold text-emerald-200">${a.customCode || '-'}</td>
-          <td class="p-2">${a.type} / ${a.breed}</td>
-          <td class="p-2">${a.gender}</td>
-          <td class="p-2 font-semibold text-white">${a.status}</td>
-          <td class="p-2">${a.city || '-'}/${a.district || '-'}</td>
-          <td class="p-2 font-mono">${a.herdNo || '-'}</td>
-        </tr>
-      `).join('');
-    }
-
     function clearExcelPreview() {
       parsedExcelAnimals = [];
-      document.getElementById('excel-import-preview-table-container').classList.add('hidden');
       document.getElementById('excel-preview-box').classList.add('hidden');
+      document.getElementById('excel-import-preview-table-container').classList.add('hidden');
       document.getElementById('excel-file-input').value = '';
     }
 
     function saveImportedExcelData() {
       if (parsedExcelAnimals.length === 0) return;
-
-      const existingTags = new Set(state.animals.map(a => a.tag));
-      let addedCount = 0;
-
-      parsedExcelAnimals.forEach(newA => {
-        if (!existingTags.has(newA.tag)) {
-          state.animals.push(newA);
-          existingTags.add(newA.tag);
-          addedCount++;
-        }
-      });
-
+      state.animals.push(...parsedExcelAnimals);
       saveState();
-      showToast(`${addedCount} adet yeni hayvan sürüye başarıyla yüklendi!`, "success");
+      renderAnimalsTable();
+      renderDashboard();
+      populateAnimalDropdowns();
       clearExcelPreview();
+      showToast("Excel verileri sisteme başarıyla aktarıldı!", "success");
     }
 
-    function renderUsersAdminTable() {
-      const tbody = document.getElementById('users-table-body');
-      document.getElementById('users-count-badge').innerText = `${state.users.length} kullanıcı`;
+    function populateAnimalDropdowns() {
+      const selectTreat = document.getElementById('treat-tag');
+      const selectBreed = document.getElementById('breed-tag');
 
-      tbody.innerHTML = state.users.map(u => {
-        const daysLeft = getDaysDiff(u.expireDate);
-        let badge = `<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">Aktif (${daysLeft} gün)</span>`;
-        
-        if (u.role === 'admin') {
-          badge = `<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-purple-500/20 text-purple-300 border border-emerald-500/30">Yönetici</span>`;
-        } else if (daysLeft < 0) {
-          badge = `<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-rose-500/20 text-rose-400 border border-emerald-500/30">Süresi Doldu (Pasif)</span>`;
-        } else if (daysLeft <= 30) {
-          badge = `<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-amber-500/20 text-amber-300 border border-emerald-500/30">Son ${daysLeft} Gün</span>`;
-        }
+      const optionsHtml = '<option value="">Kayıtlı Hayvan Seçin...</option>' + 
+        state.animals.map(a => `<option value="${a.tag}">${a.tag} ${a.customCode ? '(' + a.customCode + ')' : ''} - ${a.breed}</option>`).join('');
 
-        return `
-          <tr class="hover:bg-slate-800/40">
-            <td class="py-3 px-3 font-bold text-white">${u.farmName}</td>
-            <td class="py-3 px-3 font-mono text-xs">
-              <p class="text-emerald-400">${u.name}</p>
-              <p class="text-slate-500">Şifre: ${u.pass}</p>
-            </td>
-            <td class="py-3 px-3 text-xs text-slate-300">${formatDateTR(u.expireDate)}</td>
-            <td class="py-3 px-3">${badge}</td>
-            <td class="py-3 px-3 text-right space-x-1">
-              ${u.role !== 'admin' ? `
-                <button onclick="extendUserLicense('${u.id}', 30)" class="px-2 py-1 rounded bg-slate-800 hover:bg-slate-700 text-[10px] text-emerald-300 border border-slate-700">
-                  +30 Gün
-                </button>
-                <button onclick="extendUserLicense('${u.id}', 365)" class="px-2 py-1 rounded bg-slate-800 hover:bg-slate-700 text-[10px] text-emerald-300 border border-slate-700">
-                  +1 Yıl
-                </button>
-                <button onclick="deleteUser('${u.id}')" class="text-xs text-rose-400 hover:text-rose-300 p-1 ml-1">
-                  <i class="fa-solid fa-trash"></i>
-                </button>
-              ` : '-'}
-            </td>
-          </tr>
-        `;
-      }).join('');
+      if (selectTreat) selectTreat.innerHTML = optionsHtml;
+      if (selectBreed) selectBreed.innerHTML = optionsHtml;
     }
 
-    function handleAddUser(e) {
-      e.preventDefault();
-      let expireDateStr = document.getElementById('user-expire').value;
-      const preset = document.getElementById('user-sub-preset').value;
-      
-      if (preset !== 'custom') {
-        const days = parseInt(preset);
-        const d = new Date();
-        d.setDate(d.getDate() + days);
-        expireDateStr = d.toISOString().split('T')[0];
-      }
-
-      const newUser = {
-        id: 'u_' + Date.now(),
-        farmName: document.getElementById('user-farmname').value,
-        name: document.getElementById('user-name').value.trim(),
-        pass: document.getElementById('user-pass').value,
-        expireDate: expireDateStr,
-        role: document.getElementById('user-role').value
-      };
-
-      state.users.push(newUser);
-      saveState();
-      document.getElementById('form-add-user').reset();
-      onUserSubPresetChange('365');
-      showToast(`${newUser.farmName} hesabı ve aboneliği oluşturuldu`, "success");
-    }
-
-    function onUserSubPresetChange(val) {
-      const customWrapper = document.getElementById('user-custom-date-wrapper');
-      if (val === 'custom') {
-        customWrapper.classList.remove('hidden');
-      } else {
-        customWrapper.classList.add('hidden');
-        const days = parseInt(val);
-        const d = new Date();
-        d.setDate(d.getDate() + days);
-        document.getElementById('user-expire').value = d.toISOString().split('T')[0];
-      }
-    }
-
-    function extendUserLicense(userId, days) {
-      const user = state.users.find(u => u.id === userId);
-      if (user) {
-        let baseDate = new Date(user.expireDate);
-        if (isNaN(baseDate) || baseDate < new Date()) {
-          baseDate = new Date();
-        }
-        baseDate.setDate(baseDate.getDate() + days);
-        user.expireDate = baseDate.toISOString().split('T')[0];
-        saveState();
-        showToast(`${user.farmName} erişim süresi +${days} gün uzatıldı`, "success");
-      }
-    }
-
-    function deleteUser(userId) {
-      if (confirm("Bu çiftlik kullanıcısını silmek istediğinize emin misiniz?")) {
-        state.users = state.users.filter(u => u.id !== userId);
-        saveState();
-        showToast("Kullanıcı hesabı silindi", "warning");
-      }
-    }
-
-    function populateFarmSelects() {
-      const select = document.getElementById('animal-farm');
-      const container = document.getElementById('farm-select-container');
-      const currentUser = getCurrentUser();
-      if (!currentUser) return;
-
-      if (currentUser.role === 'admin') {
-        container.classList.remove('hidden');
-        select.innerHTML = state.users.filter(u => u.role !== 'admin').map(u => `
-          <option value="${u.id}">${u.farmName} (${u.name})</option>
-        `).join('');
-      } else {
-        container.classList.add('hidden');
-      }
-    }
-
-    function renderAnimalsTable() {
-      const tbody = document.getElementById('animals-table-body');
-      const query = (document.getElementById('animal-filter-input')?.value || '').toLowerCase();
-      const animals = filterByCurrentRole(state.animals);
-
-      document.getElementById('animals-total-badge').innerText = `${animals.length} baş`;
-
-      const filtered = animals.filter(a =>
-        a.tag.toLowerCase().includes(query) ||
-        (a.customCode && a.customCode.toLowerCase().includes(query)) ||
-        (a.herdNo && a.herdNo.toLowerCase().includes(query)) ||
-        (a.status && a.status.toLowerCase().includes(query)) ||
-        (a.breed && a.breed.toLowerCase().includes(query)) ||
-        (a.city && a.city.toLowerCase().includes(query)) ||
-        (a.owner && a.owner.toLowerCase().includes(query))
-      );
-
-      if (filtered.length === 0) {
-        tbody.innerHTML = `<tr><td colspan="7" class="text-center py-4 text-xs text-slate-500">Sürü kaydı bulunmuyor.</td></tr>`;
+    function addMedicationSlot() {
+      const container = document.getElementById('medication-slots-container');
+      const currentCount = container.querySelectorAll('.med-slot-row').length;
+      if (currentCount >= 5) {
+        showToast("Tek seferde en fazla 5 ilaç eklenebilir.", "error");
         return;
       }
-
-      tbody.innerHTML = filtered.map(a => `
-        <tr class="hover:bg-slate-800/40">
-          <td class="py-3 px-3 font-mono font-bold text-emerald-400">${a.tag}</td>
-          <td class="py-3 px-3 font-semibold text-emerald-200">${a.customCode || '-'}</td>
-          <td class="py-3 px-3 text-xs">
-            <span>${a.type || 'Büyükbaş'} / ${a.breed}</span>
-            <span class="ml-1 text-[10px] px-1.5 py-0.5 rounded ${a.gender === 'Dişi' ? 'bg-pink-500/20 text-pink-300' : 'bg-blue-500/20 text-blue-300'}">${a.gender}</span>
-          </td>
-          <td class="py-3 px-3 font-semibold text-white text-xs">${a.status || a.category || 'Sağmal İnek'}</td>
-          <td class="py-3 px-3 text-xs text-slate-300">
-            <p>${a.city || '-'}${a.district ? ' / ' + a.district : ''}</p>
-            <p class="text-[10px] text-slate-500">${a.owner ? 'Sahibi: ' + a.owner : ''}</p>
-          </td>
-          <td class="py-3 px-3 font-mono text-xs text-slate-400">${a.herdNo || '-'}</td>
-          <td class="py-3 px-3 text-right">
-            <button onclick="deleteAnimal('${a.id}')" class="text-xs text-rose-400 hover:text-rose-300 p-1">
-              <i class="fa-solid fa-trash"></i>
-            </button>
-          </td>
-        </tr>
-      `).join('');
-    }
-
-    function handleAddAnimal(e) {
-      e.preventDefault();
-      const currentUser = getCurrentUser();
-      let farmId = currentUser.id;
-      let farmName = currentUser.farmName;
-
-      if (currentUser.role === 'admin') {
-        const sel = document.getElementById('animal-farm');
-        const selectedUser = state.users.find(u => u.id === sel.value);
-        if (selectedUser) {
-          farmId = selectedUser.id;
-          farmName = selectedUser.farmName;
-        }
-      }
-
-      const newAnimal = {
-        id: 'a_' + Date.now(),
-        tag: document.getElementById('animal-tag').value.trim(),
-        customCode: document.getElementById('animal-custom-code').value.trim(),
-        farmId: farmId,
-        farmName: farmName,
-        type: document.getElementById('animal-type').value,
-        breed: document.getElementById('animal-breed').value,
-        gender: document.getElementById('animal-gender').value,
-        birth: document.getElementById('animal-birth').value,
-        status: document.getElementById('animal-status').value,
-        category: document.getElementById('animal-status').value,
-        city: document.getElementById('animal-city').value,
-        district: document.getElementById('animal-district').value,
-        neighborhood: document.getElementById('animal-neighborhood').value,
-        owner: document.getElementById('animal-owner').value,
-        herdNo: document.getElementById('animal-herdno').value,
-        mother: document.getElementById('animal-mother').value
-      };
-
-      state.animals.push(newAnimal);
-      saveState();
-      document.getElementById('form-add-animal').reset();
-      showToast(`${newAnimal.tag} (${newAnimal.customCode || 'Tekil'}) sürüye eklendi`, "success");
-    }
-
-    function deleteAnimal(id) {
-      if (confirm("Bu hayvanı silmek istediğinize emin misiniz?")) {
-        state.animals = state.animals.filter(a => a.id !== id);
-        saveState();
-        showToast("Hayvan silindi", "warning");
-      }
-    }
-
-    function renderTreatmentsTable() {
-      const tbody = document.getElementById('treatments-table-body');
-      const treatments = filterByCurrentRole(state.treatments);
-
-      if (treatments.length === 0) {
-        tbody.innerHTML = `<tr><td colspan="6" class="text-center py-4 text-xs text-slate-500">Kayıtlı tedavi bulunmuyor.</td></tr>`;
-        return;
-      }
-
-      tbody.innerHTML = treatments.map(t => {
-        const startDate = new Date(t.date);
-        const endDate = new Date(startDate);
-        const wDays = parseInt(t.withdrawalDays || 0);
-        endDate.setDate(endDate.getDate() + wDays);
-        const endDateStr = endDate.toISOString().split('T')[0];
-
-        const isStillWithdrawal = wDays > 0 && endDate >= new Date(getTodayDateString()) && t.status === 'Devam ediyor';
-
-        return `
-          <tr class="hover:bg-slate-800/40">
-            <td class="py-3 px-3 font-mono font-bold text-amber-400">${t.tag}</td>
-            <td class="py-3 px-3">
-              <p class="font-semibold text-slate-200 text-xs">${t.diag}</p>
-              <p class="text-[10px] text-slate-400">${t.med || 'İlaç belirtilmedi'}</p>
-            </td>
-            <td class="py-3 px-3 text-xs text-slate-400">${formatDateTR(t.date)}</td>
-            <td class="py-3 px-3 text-xs">
-              ${wDays > 0 ? `
-                <span class="font-bold ${isStillWithdrawal ? 'text-rose-400 animate-pulse' : 'text-slate-400'}">
-                  ${formatDateTR(endDateStr)} (${wDays} Gün Bekleme)
-                </span>
-              ` : '<span class="text-emerald-400">Arıtma Süresi Yok</span>'}
-            </td>
-            <td class="py-3 px-3">
-              <span class="px-2 py-0.5 rounded text-[10px] border font-semibold ${t.status === 'İyileşti' ? 'bg-emerald-500/20 text-emerald-300 border-emerald-500/30' : 'bg-amber-500/20 text-amber-300 border-amber-500/30'}">
-                ${t.status}
-              </span>
-            </td>
-            <td class="py-3 px-3 text-right">
-              <button onclick="deleteTreatment('${t.id}')" class="text-xs text-rose-400 hover:text-rose-300 p-1">
-                <i class="fa-solid fa-trash"></i>
-              </button>
-            </td>
-          </tr>
-        `;
-      }).join('');
+      const div = document.createElement('div');
+      div.className = 'flex gap-2 med-slot-row';
+      div.innerHTML = `
+        <input type="text" placeholder="${currentCount + 1}. İlaç Adı ve Dozajı" class="flex-1 bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-xs text-white focus:border-emerald-500 focus:outline-none med-input">
+        <button type="button" onclick="this.parentElement.remove()" class="px-2.5 py-1 rounded-xl bg-rose-500/10 text-rose-400 hover:bg-rose-500/20 text-xs">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      `;
+      container.appendChild(div);
     }
 
     function handleAddTreatment(e) {
       e.preventDefault();
-      const currentUser = getCurrentUser();
-      const newTreat = {
-        id: 't_' + Date.now(),
-        tag: document.getElementById('treat-tag').value.trim(),
-        farmId: currentUser.id,
-        date: document.getElementById('treat-date').value || getTodayDateString(),
-        diag: document.getElementById('treat-diag').value,
-        med: document.getElementById('treat-med').value,
-        withdrawalDays: parseInt(document.getElementById('treat-withdrawal').value || 0),
-        status: document.getElementById('treat-status').value
-      };
+      const tag = document.getElementById('treat-tag').value;
+      const date = document.getElementById('treat-date').value;
+      const diag = document.getElementById('treat-diag').value;
+      const withdrawalDays = Number(document.getElementById('treat-withdrawal').value) || 0;
+      const status = document.getElementById('treat-status').value;
 
-      state.treatments.push(newTreat);
+      const medInputs = document.querySelectorAll('.med-input');
+      const medications = [];
+      medInputs.forEach(inp => {
+        if (inp.value.trim()) medications.push(inp.value.trim());
+      });
+
+      const dObj = new Date(date);
+      dObj.setDate(dObj.getDate() + withdrawalDays);
+      const withdrawalEnd = dObj.toISOString().split('T')[0];
+
+      state.treatments.push({
+        id: 'tr_' + Date.now(),
+        tag,
+        date,
+        diagnoses: [diag],
+        medications,
+        withdrawalDays,
+        withdrawalEnd,
+        status
+      });
+
       saveState();
+      renderTreatmentsTable();
+      renderDashboard();
       document.getElementById('form-add-treatment').reset();
-      showToast("İlaç/Tedavi kaydı oluşturuldu", "success");
+      document.getElementById('medication-slots-container').innerHTML = `
+        <div class="flex gap-2 med-slot-row">
+          <input type="text" placeholder="1. İlaç Adı ve Dozajı (Örn: Penstrep 20ml)" class="flex-1 bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-xs text-white focus:border-emerald-500 focus:outline-none med-input">
+        </div>
+      `;
+      showToast("Tedavi kaydı başarıyla eklendi!", "success");
+    }
+
+    function renderTreatmentsTable() {
+      const tbody = document.getElementById('treatments-table-body');
+      if (!tbody) return;
+      tbody.innerHTML = '';
+
+      if (state.treatments.length === 0) {
+        tbody.innerHTML = `<tr><td colspan="6" class="text-center py-6 text-slate-500 text-xs">Kayıtlı tedavi bulunamadı.</td></tr>`;
+        return;
+      }
+
+      state.treatments.forEach(tr => {
+        const row = document.createElement('tr');
+        row.className = 'hover:bg-slate-900/50 transition-colors';
+        row.innerHTML = `
+          <td class="py-3 px-3 font-mono font-bold text-emerald-400">${tr.tag}</td>
+          <td class="py-3 px-3">
+            <div class="font-bold text-white">${tr.diagnoses.join(', ')}</div>
+            <div class="text-[10px] text-slate-400">İlaçlar: ${tr.medications.join(' • ') || 'Belirtilmedi'}</div>
+          </td>
+          <td class="py-3 px-3 text-xs">${tr.date}</td>
+          <td class="py-3 px-3 text-xs font-semibold text-rose-400">${tr.withdrawalEnd} (${tr.withdrawalDays} Gün)</td>
+          <td class="py-3 px-3"><span class="px-2 py-0.5 rounded-full bg-amber-500/20 text-amber-400 text-xs">${tr.status}</span></td>
+          <td class="py-3 px-3 text-right">
+            <button onclick="deleteTreatment('${tr.id}')" class="p-1.5 rounded-lg bg-rose-500/10 text-rose-400 hover:bg-rose-500/20 transition-all">
+              <i class="fa-solid fa-trash text-xs"></i>
+            </button>
+          </td>
+        `;
+        tbody.appendChild(row);
+      });
     }
 
     function deleteTreatment(id) {
-      if (confirm("Tedavi kaydını silmek istiyor musunuz?")) {
+      if (confirm("Bu tedavi kaydını silmek istediğinize emin misiniz?")) {
         state.treatments = state.treatments.filter(t => t.id !== id);
         saveState();
-        showToast("Tedavi kaydı silindi", "warning");
+        renderTreatmentsTable();
+        renderDashboard();
+        showToast("Tedavi kaydı silindi.", "success");
       }
     }
 
@@ -2030,365 +1836,301 @@
       const dateVal = document.getElementById('breed-date').value;
       const estInput = document.getElementById('breed-estbirth');
 
-      if ((type.includes('Tohumlama') || type.includes('Gebelik')) && dateVal) {
+      if (type === 'Suni Tohumlama' && dateVal && estInput) {
         const d = new Date(dateVal);
         d.setDate(d.getDate() + 283);
         estInput.value = d.toISOString().split('T')[0];
       }
     }
 
+    function handleAddBreeding(e) {
+      e.preventDefault();
+      const tag = document.getElementById('breed-tag').value;
+      const type = document.getElementById('breed-type').value;
+      const date = document.getElementById('breed-date').value;
+      const bullCode = document.getElementById('breed-bull').value.trim();
+      const estBirth = document.getElementById('breed-estbirth').value;
+      const result = document.getElementById('breed-result').value.trim();
+
+      state.breeding.push({ id: 'b_' + Date.now(), tag, type, date, bullCode, estBirth, result });
+      saveState();
+      renderBreedingTable();
+      document.getElementById('form-add-breeding').reset();
+      showToast("Üreme kaydı eklendi!", "success");
+    }
+
     function renderBreedingTable() {
       const tbody = document.getElementById('breeding-table-body');
-      const breeding = filterByCurrentRole(state.breeding);
+      if (!tbody) return;
+      tbody.innerHTML = '';
 
-      if (breeding.length === 0) {
-        tbody.innerHTML = `<tr><td colspan="7" class="text-center py-4 text-xs text-slate-500">Üreme kaydı bulunmuyor.</td></tr>`;
+      if (state.breeding.length === 0) {
+        tbody.innerHTML = `<tr><td colspan="7" class="text-center py-6 text-slate-500 text-xs">Kayıtlı üreme verisi bulunamadı.</td></tr>`;
         return;
       }
 
-      tbody.innerHTML = breeding.map(b => `
-        <tr class="hover:bg-slate-800/40">
-          <td class="py-3 px-3 font-mono font-bold text-pink-400">${b.tag}</td>
-          <td class="py-3 px-3 text-xs font-semibold text-slate-200">${b.type}</td>
-          <td class="py-3 px-3 text-xs text-slate-400">${formatDateTR(b.date)}</td>
-          <td class="py-3 px-3 text-xs font-mono text-slate-300">${b.bull || '-'}</td>
-          <td class="py-3 px-3 text-xs text-emerald-400 font-bold">${formatDateTR(b.estBirth)}</td>
-          <td class="py-3 px-3 text-xs text-slate-300">${b.result || '-'}</td>
+      state.breeding.forEach(b => {
+        const tr = document.createElement('tr');
+        tr.className = 'hover:bg-slate-900/50 transition-colors';
+        tr.innerHTML = `
+          <td class="py-3 px-3 font-mono font-bold text-emerald-400">${b.tag}</td>
+          <td class="py-3 px-3 font-bold text-white">${b.type}</td>
+          <td class="py-3 px-3 text-xs">${b.date}</td>
+          <td class="py-3 px-3">${b.bullCode || '-'}</td>
+          <td class="py-3 px-3 text-xs text-pink-400">${b.estBirth || '-'}</td>
+          <td class="py-3 px-3"><span class="px-2 py-0.5 rounded-full bg-slate-800 text-slate-300 text-xs">${b.result || '-'}</span></td>
           <td class="py-3 px-3 text-right">
-            <button onclick="deleteBreeding('${b.id}')" class="text-xs text-rose-400 hover:text-rose-300 p-1">
-              <i class="fa-solid fa-trash"></i>
+            <button onclick="deleteBreeding('${b.id}')" class="p-1.5 rounded-lg bg-rose-500/10 text-rose-400 hover:bg-rose-500/20 transition-all">
+              <i class="fa-solid fa-trash text-xs"></i>
             </button>
           </td>
-        </tr>
-      `).join('');
-    }
-
-    function handleAddBreeding(e) {
-      e.preventDefault();
-      const currentUser = getCurrentUser();
-      const newB = {
-        id: 'b_' + Date.now(),
-        tag: document.getElementById('breed-tag').value.trim(),
-        farmId: currentUser.id,
-        type: document.getElementById('breed-type').value,
-        date: document.getElementById('breed-date').value || getTodayDateString(),
-        bull: document.getElementById('breed-bull').value,
-        estBirth: document.getElementById('breed-estbirth').value,
-        result: document.getElementById('breed-result').value
-      };
-
-      state.breeding.push(newB);
-      saveState();
-      document.getElementById('form-add-breeding').reset();
-      showToast("Üreme kaydı eklendi", "success");
+        `;
+        tbody.appendChild(tr);
+      });
     }
 
     function deleteBreeding(id) {
-      if (confirm("Üreme kaydı silinsin mi?")) {
+      if (confirm("Bu kaydı silmek istediğinize emin misiniz?")) {
         state.breeding = state.breeding.filter(b => b.id !== id);
         saveState();
-        showToast("Kayıt silindi", "warning");
+        renderBreedingTable();
+        showToast("Üreme kaydı silindi.", "success");
       }
-    }
-
-    function getProtocolSteps(protocolName, startDateStr) {
-      const start = new Date(startDateStr);
-      if (isNaN(start)) return [];
-
-      const addDays = (d, days) => {
-        const res = new Date(d);
-        res.setDate(res.getDate() + days);
-        return res.toISOString().split('T')[0];
-      };
-
-      if (protocolName.includes('Ovsynch (7 gün)')) {
-        return [
-          { day: 'Gün 0', date: addDays(start, 0), title: '1. GnRH Enjeksiyonu', desc: 'Folikül gelişim uyarımı' },
-          { day: 'Gün 7', date: addDays(start, 7), title: 'PGF₂α Enjeksiyonu', desc: 'Luteolizis (Sarı cisim geriletme)' },
-          { day: 'Gün 9', date: addDays(start, 9), title: '2. GnRH Enjeksiyonu', desc: 'Ovülasyon zamanlaması' },
-          { day: 'Gün 10', date: addDays(start, 10), title: 'Zamanlı Suni Tohumlama', desc: 'Saatlik tohumlama uygulaması' }
-        ];
-      } else if (protocolName.includes('PreSynch-Ovsynch')) {
-        return [
-          { day: 'Gün 0', date: addDays(start, 0), title: '1. Pre-PGF₂α', desc: 'Hazırlık dozu' },
-          { day: 'Gün 14', date: addDays(start, 14), title: '2. Pre-PGF₂α', desc: 'İkinci hazırlık' },
-          { day: 'Gün 26', date: addDays(start, 26), title: 'Ovsynch 1. GnRH', desc: 'Ana protokol uyarımı' },
-          { day: 'Gün 33', date: addDays(start, 33), title: 'Ovsynch PGF₂α', desc: 'Geriletme' },
-          { day: 'Gün 35', date: addDays(start, 35), title: 'GnRH + Suni Tohumlama', desc: 'Tohumlama günü' }
-        ];
-      } else {
-        return [
-          { day: 'Gün 0', date: addDays(start, 0), title: 'CIDR Takılması + GnRH', desc: 'Progesteron hormonu salgısı' },
-          { day: 'Gün 7', date: addDays(start, 7), title: 'CIDR Çıkarılması + PGF₂α', desc: 'Spiral sökümü' },
-          { day: 'Gün 9', date: addDays(start, 9), title: 'GnRH + Tohumlama', desc: 'Sabit tohumlama zamanı' }
-        ];
-      }
-    }
-
-    function renderOestrusSection() {
-      const container = document.getElementById('oestrus-cards-container');
-      const oestrus = filterByCurrentRole(state.oestrus);
-
-      if (oestrus.length === 0) {
-        container.innerHTML = `<p class="text-xs text-slate-500 py-6 text-center bg-slate-900 border border-slate-800 rounded-2xl">Çiftlikte aktif östrus protokolü bulunmamaktadır.</p>`;
-        return;
-      }
-
-      container.innerHTML = oestrus.map(o => {
-        const steps = getProtocolSteps(o.protocol, o.startDate);
-        return `
-          <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5 space-y-4">
-            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-800 pb-3">
-              <div>
-                <span class="font-mono text-base font-bold text-purple-400">${o.tag}</span>
-                <span class="ml-2 text-xs font-semibold px-2.5 py-0.5 rounded-full bg-purple-500/20 text-purple-300 border border-purple-500/30">${o.protocol}</span>
-              </div>
-              <div class="flex items-center gap-3 text-xs">
-                <span class="text-slate-400">Başlangıç: <strong class="text-white">${formatDateTR(o.startDate)}</strong></span>
-                <button onclick="deleteOestrus('${o.id}')" class="text-rose-400 hover:text-rose-300">
-                  <i class="fa-solid fa-trash mr-1"></i> Kaldır
-                </button>
-              </div>
-            </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3">
-              ${steps.map(step => `
-                <div class="bg-slate-950 p-3 rounded-xl border border-slate-800">
-                  <div class="flex items-center justify-between text-[11px] font-bold text-purple-400 mb-1">
-                    <span>${step.day}</span>
-                    <span class="text-slate-400">${formatDateTR(step.date)}</span>
-                  </div>
-                  <p class="text-xs font-semibold text-slate-200">${step.title}</p>
-                  <p class="text-[10px] text-slate-400 mt-1 leading-relaxed">${step.desc}</p>
-                </div>
-              `).join('')}
-            </div>
-          </div>
-        `;
-      }).join('');
     }
 
     function handleAddOestrus(e) {
       e.preventDefault();
-      const currentUser = getCurrentUser();
-      const newO = {
-        id: 'o_' + Date.now(),
-        tag: document.getElementById('oestrus-tag').value.trim(),
-        farmId: currentUser.id,
-        protocol: document.getElementById('oestrus-protocol').value,
-        startDate: document.getElementById('oestrus-startdate').value || getTodayDateString()
-      };
+      const tag = document.getElementById('oestrus-tag').value.trim();
+      const protocol = document.getElementById('oestrus-protocol').value;
+      const startDate = document.getElementById('oestrus-startdate').value;
 
-      state.oestrus.push(newO);
+      let steps = [];
+      if (protocol.includes('Ovsynch')) {
+        const addDays = (base, n) => { const x = new Date(base); x.setDate(x.getDate() + n); return x.toISOString().split('T')[0]; };
+        steps = [
+          { day: 'Gün 0', name: 'GnRH Enjeksiyonu', date: startDate },
+          { day: 'Gün 7', name: 'PGF₂α Enjeksiyonu', date: addDays(startDate, 7) },
+          { day: 'Gün 9', name: '2. GnRH & Sabit Saat Tohumlama', date: addDays(startDate, 9) }
+        ];
+      } else {
+        steps = [
+          { day: 'Başlangıç', name: 'CIDR Takılması', date: startDate },
+          { day: '7. Gün', name: 'CIDR Çıkarılma & PGF₂α', date: getRelativeDateStr(7) },
+          { day: '9. Gün', name: 'Suni Tohumlama', date: getRelativeDateStr(9) }
+        ];
+      }
+
+      state.announcements.push({
+        id: 'oe_' + Date.now(),
+        title: `Östrus Protokolü: ${tag} (${protocol})`,
+        msg: `Başlangıç: ${startDate}. Adımlar: ` + steps.map(s => `${s.day}: ${s.name} (${s.date})`).join(' | '),
+        date: startDate
+      });
       saveState();
+      renderAnnouncementsFeed();
       document.getElementById('form-add-oestrus').reset();
-      showToast(`${newO.tag} için östrus programı başlatıldı`, "success");
-    }
-
-    function deleteOestrus(id) {
-      if (confirm("Östrus programı kaldırılsın mı?")) {
-        state.oestrus = state.oestrus.filter(o => o.id !== id);
-        saveState();
-        showToast("Program kaldırıldı", "warning");
-      }
-    }
-
-    function renderFinanceTable() {
-      const tbody = document.getElementById('finance-table-body');
-      const finance = filterByCurrentRole(state.finance);
-
-      if (finance.length === 0) {
-        tbody.innerHTML = `<tr><td colspan="6" class="text-center py-4 text-xs text-slate-500">Kayıtlı finansal hareket bulunmuyor.</td></tr>`;
-        return;
-      }
-
-      tbody.innerHTML = finance.map(f => {
-        const isIncome = f.type === 'Gelir';
-        return `
-          <tr class="hover:bg-slate-800/40">
-            <td class="py-3 px-3">
-              <span class="px-2 py-0.5 rounded text-[10px] font-bold ${isIncome ? 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/30' : 'bg-rose-500/20 text-rose-400 border border-rose-500/30'}">
-                ${f.type}
-              </span>
-            </td>
-            <td class="py-3 px-3 text-xs text-slate-400">${formatDateTR(f.date)}</td>
-            <td class="py-3 px-3">
-              <p class="text-xs font-semibold text-slate-200">${f.desc}</p>
-              <p class="text-[10px] text-slate-400">${f.cat}</p>
-            </td>
-            <td class="py-3 px-3 text-xs text-slate-300">${f.farmName || '-'}</td>
-            <td class="py-3 px-3 font-mono font-bold ${isIncome ? 'text-emerald-400' : 'text-rose-400'}">${formatCurrency(f.amount)}</td>
-            <td class="py-3 px-3 text-right">
-              <button onclick="deleteFinance('${f.id}')" class="text-xs text-rose-400 hover:text-rose-300 p-1">
-                <i class="fa-solid fa-trash"></i>
-              </button>
-            </td>
-          </tr>
-        `;
-      }).join('');
+      showToast("Östrus protokolü başlatıldı ve duyurulara eklendi!", "success");
+      switchView('announcements');
     }
 
     function handleAddFinance(e) {
       e.preventDefault();
-      const currentUser = getCurrentUser();
-      const newFin = {
-        id: 'fn_' + Date.now(),
-        farmId: currentUser.id,
-        farmName: currentUser.farmName,
-        type: document.getElementById('fin-type').value,
-        date: document.getElementById('fin-date').value || getTodayDateString(),
-        cat: document.getElementById('fin-cat').value,
-        desc: document.getElementById('fin-desc').value,
-        amount: parseFloat(document.getElementById('fin-amount').value || 0)
-      };
+      const type = document.getElementById('fin-type').value;
+      const date = document.getElementById('fin-date').value;
+      const category = document.getElementById('fin-cat').value;
+      const desc = document.getElementById('fin-desc').value.trim();
+      const amount = Number(document.getElementById('fin-amount').value) || 0;
 
-      state.finance.push(newFin);
+      state.finance.push({ id: 'f_' + Date.now(), type, date, category, desc, amount });
       saveState();
+      renderFinanceTable();
+      renderDashboard();
       document.getElementById('form-add-finance').reset();
-      showToast("Finans kaydı oluşturuldu", "success");
+      showToast("Finans kaydı eklendi!", "success");
     }
 
-    function deleteFinance(id) {
-      if (confirm("Finans kaydı silinsin mi?")) {
-        state.finance = state.finance.filter(f => f.id !== id);
-        saveState();
-        showToast("Finans kaydı silindi", "warning");
-      }
-    }
+    function renderFinanceTable() {
+      const tbody = document.getElementById('finance-table-body');
+      if (!tbody) return;
+      tbody.innerHTML = '';
 
-    function renderPaymentsTable() {
-      const tbody = document.getElementById('payments-table-body');
-      const payments = filterByCurrentRole(state.payments);
-
-      if (payments.length === 0) {
-        tbody.innerHTML = `<tr><td colspan="7" class="text-center py-4 text-xs text-slate-500">Takvimde ödeme bulunmuyor.</td></tr>`;
+      if (state.finance.length === 0) {
+        tbody.innerHTML = `<tr><td colspan="5" class="text-center py-6 text-slate-500 text-xs">Kayıtlı finans hareketi yok.</td></tr>`;
         return;
       }
 
-      tbody.innerHTML = payments.map(p => `
-        <tr class="hover:bg-slate-800/40">
-          <td class="py-3 px-3 font-bold text-slate-200">${p.title}</td>
-          <td class="py-3 px-3 text-xs text-slate-400">${p.farmName || '-'}</td>
-          <td class="py-3 px-3 text-xs">
-            <span class="px-2 py-0.5 rounded text-[10px] ${p.type === 'Alacak' ? 'bg-emerald-500/20 text-emerald-300' : 'bg-amber-500/20 text-amber-300'}">${p.type}</span>
+      state.finance.forEach(f => {
+        const tr = document.createElement('tr');
+        tr.className = 'hover:bg-slate-900/50 transition-colors';
+        tr.innerHTML = `
+          <td class="py-3 px-3"><span class="px-2.5 py-1 rounded-full text-xs font-bold ${f.type === 'Gelir' ? 'bg-emerald-500/20 text-emerald-400' : 'bg-rose-500/20 text-rose-400'}">${f.type}</span></td>
+          <td class="py-3 px-3 text-xs">${f.date}</td>
+          <td class="py-3 px-3">
+            <div class="font-bold text-white">${f.category}</div>
+            <div class="text-[10px] text-slate-400">${f.desc}</div>
           </td>
-          <td class="py-3 px-3 text-xs text-slate-400">${formatDateTR(p.date)}</td>
-          <td class="py-3 px-3 font-mono font-bold ${p.type === 'Alacak' ? 'text-emerald-400' : 'text-amber-400'}">${formatCurrency(p.amount)}</td>
-          <td class="py-3 px-3 text-xs">
-            <button onclick="togglePaymentStatus('${p.id}')" class="px-2 py-0.5 rounded text-[10px] font-bold ${p.status === 'Tamamlandı' ? 'bg-emerald-950 text-emerald-300 border border-emerald-800' : 'bg-amber-950 text-amber-300 border border-amber-800'}">
-              ${p.status}
-            </button>
-          </td>
+          <td class="py-3 px-3 font-mono font-bold ${f.type === 'Gelir' ? 'text-emerald-400' : 'text-rose-400'}">₺${Number(f.amount).toLocaleString('tr-TR', {minimumFractionDigits: 2})}</td>
           <td class="py-3 px-3 text-right">
-            <button onclick="deletePayment('${p.id}')" class="text-xs text-rose-400 hover:text-rose-300 p-1">
-              <i class="fa-solid fa-trash"></i>
+            <button onclick="deleteFinance('${f.id}')" class="p-1.5 rounded-lg bg-rose-500/10 text-rose-400 hover:bg-rose-500/20 transition-all">
+              <i class="fa-solid fa-trash text-xs"></i>
             </button>
           </td>
-        </tr>
-      `).join('');
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
+    function deleteFinance(id) {
+      if (confirm("Bu finans kaydını silmek istediğinize emin misiniz?")) {
+        state.finance = state.finance.filter(f => f.id !== id);
+        saveState();
+        renderFinanceTable();
+        renderDashboard();
+        showToast("Kayıt silindi.", "success");
+      }
     }
 
     function handleAddPayment(e) {
       e.preventDefault();
-      const currentUser = getCurrentUser();
-      const newP = {
-        id: 'p_' + Date.now(),
-        farmId: currentUser.id,
-        farmName: currentUser.farmName,
-        title: document.getElementById('pay-title').value,
-        date: document.getElementById('pay-date').value || getTodayDateString(),
-        amount: parseFloat(document.getElementById('pay-amount').value || 0),
-        type: document.getElementById('pay-type').value,
-        status: document.getElementById('pay-status').value
-      };
+      const title = document.getElementById('pay-title').value.trim();
+      const date = document.getElementById('pay-date').value;
+      const amount = Number(document.getElementById('pay-amount').value) || 0;
+      const type = document.getElementById('pay-type').value;
+      const status = document.getElementById('pay-status').value;
 
-      state.payments.push(newP);
+      state.payments.push({ id: 'p_' + Date.now(), title, date, amount, type, status });
       saveState();
+      renderPaymentsTable();
       document.getElementById('form-add-payment').reset();
-      showToast("Ödeme takvime eklendi", "success");
+      showToast("Ödeme takvime eklendi!", "success");
     }
 
-    function togglePaymentStatus(id) {
-      const pay = state.payments.find(p => p.id === id);
-      if (pay) {
-        pay.status = pay.status === 'Tamamlandı' ? 'Bekliyor' : 'Tamamlandı';
-        saveState();
-        showToast("Ödeme durumu güncellendi", "info");
-      }
-    }
+    function renderPaymentsTable() {
+      const tbody = document.getElementById('payments-table-body');
+      if (!tbody) return;
+      tbody.innerHTML = '';
 
-    function deletePayment(id) {
-      if (confirm("Ödeme kaydı silinsin mi?")) {
-        state.payments = state.payments.filter(p => p.id !== id);
-        saveState();
-        showToast("Ödeme silindi", "warning");
-      }
-    }
-
-    function renderAnnouncementsFeed() {
-      const container = document.getElementById('announcement-feed');
-      if (state.announcements.length === 0) {
-        container.innerHTML = `<p class="text-xs text-slate-500 py-6 text-center bg-slate-900 border border-slate-800 rounded-2xl">Yayınlanan duyuru bulunmamaktadır.</p>`;
+      if (state.payments.length === 0) {
+        tbody.innerHTML = `<tr><td colspan="6" class="text-center py-6 text-slate-500 text-xs">Bekleyen ödeme kaydı yok.</td></tr>`;
         return;
       }
 
-      const currentUser = getCurrentUser();
-
-      container.innerHTML = state.announcements.map(a => `
-        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5 space-y-2 relative">
-          ${currentUser && currentUser.role === 'admin' ? `
-            <button onclick="deleteAnnouncement('${a.id}')" class="absolute top-4 right-4 text-slate-500 hover:text-rose-400 p-1">
+      state.payments.forEach(p => {
+        const tr = document.createElement('tr');
+        tr.className = 'hover:bg-slate-900/50 transition-colors';
+        tr.innerHTML = `
+          <td class="py-3 px-3 font-bold text-white">${p.title}</td>
+          <td class="py-3 px-3"><span class="px-2 py-0.5 rounded-full text-xs font-semibold ${p.type === 'Alacak' ? 'bg-cyan-500/20 text-cyan-400' : 'bg-amber-500/20 text-amber-400'}">${p.type}</span></td>
+          <td class="py-3 px-3 text-xs">${p.date}</td>
+          <td class="py-3 px-3 font-mono font-bold text-white">₺${Number(p.amount).toLocaleString('tr-TR', {minimumFractionDigits: 2})}</td>
+          <td class="py-3 px-3"><span class="px-2 py-0.5 rounded-full text-xs bg-slate-800 text-slate-300">${p.status}</span></td>
+          <td class="py-3 px-3 text-right">
+            <button onclick="deletePayment('${p.id}')" class="p-1.5 rounded-lg bg-rose-500/10 text-rose-400 hover:bg-rose-500/20 transition-all">
               <i class="fa-solid fa-trash text-xs"></i>
             </button>
-          ` : ''}
-          <div class="flex items-center gap-2 text-xs">
-            <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-teal-500/20 text-teal-300 border border-teal-500/30">GENEL YÖNETİM DUYURUSU</span>
-            <span class="text-slate-400">${formatDateTR(a.date)}</span>
-          </div>
-          <h4 class="font-bold text-slate-100 text-base">${a.title}</h4>
-          <p class="text-xs text-slate-300 leading-relaxed whitespace-pre-line">${a.msg}</p>
-        </div>
-      `).join('');
+          </td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
+    function deletePayment(id) {
+      if (confirm("Bu ödeme kaydını silmek istediğinize emin misiniz?")) {
+        state.payments = state.payments.filter(p => p.id !== id);
+        saveState();
+        renderPaymentsTable();
+        showToast("Kayıt silindi.", "success");
+      }
     }
 
     function handleAddAnnouncement(e) {
       e.preventDefault();
-      const newAnn = {
-        id: 'an_' + Date.now(),
-        title: document.getElementById('ann-title').value,
-        msg: document.getElementById('ann-msg').value,
-        date: getTodayDateString()
-      };
+      const title = document.getElementById('ann-title').value.trim();
+      const msg = document.getElementById('ann-msg').value.trim();
 
-      state.announcements.unshift(newAnn);
+      state.announcements.push({ id: 'an_' + Date.now(), title, msg, date: getTodayDateString() });
       saveState();
+      renderAnnouncementsFeed();
       document.getElementById('form-add-announcement').reset();
-      showToast("Duyuru yayınlandı", "success");
+      showToast("Duyuru yayınlandı!", "success");
     }
 
-    function deleteAnnouncement(id) {
-      if (confirm("Duyuru kaldırılsın mı?")) {
-        state.announcements = state.announcements.filter(a => a.id !== id);
+    function renderAnnouncementsFeed() {
+      const feed = document.getElementById('announcement-feed');
+      if (!feed) return;
+      feed.innerHTML = '';
+
+      if (state.announcements.length === 0) {
+        feed.innerHTML = `<p class="text-xs text-slate-500 text-center py-6">Yayınlanmış duyuru bulunmuyor.</p>`;
+        return;
+      }
+
+      state.announcements.slice().reverse().forEach(an => {
+        const div = document.createElement('div');
+        div.className = 'bg-slate-900 border border-slate-800 rounded-2xl p-4 space-y-2 shadow-lg';
+        div.innerHTML = `
+          <div class="flex items-center justify-between">
+            <h4 class="font-bold text-white text-sm flex items-center gap-2">
+              <i class="fa-solid fa-bullhorn text-teal-400"></i> ${an.title}
+            </h4>
+            <span class="text-[10px] text-slate-400">${an.date}</span>
+          </div>
+          <p class="text-xs text-slate-300 leading-relaxed">${an.msg}</p>
+        `;
+        feed.appendChild(div);
+      });
+    }
+
+    function handlePasswordChange(e) {
+      e.preventDefault();
+      const oldPass = document.getElementById('settings-old-pass').value.trim();
+      const newPass = document.getElementById('settings-new-pass').value.trim();
+      const confirmPass = document.getElementById('settings-new-pass-confirm').value.trim();
+
+      if (newPass !== confirmPass) {
+        showToast("Yeni şifreler birbiriyle uyuşmuyor!", "error");
+        return;
+      }
+
+      if (state.currentUser.role === 'admin') {
+        if (oldPass !== '!?' + 'nhtilhan' + '!?') {
+          showToast("Mevcut yönetici şifreniz hatalı!", "error");
+          return;
+        }
+        showToast("Yönetici şifresi güncellendi!", "success");
+      } else {
+        const tenant = state.tenants.find(t => t.username === state.currentUser.username);
+        if (!tenant || tenant.password !== oldPass) {
+          showToast("Mevcut şifreniz hatalı!", "error");
+          return;
+        }
+        tenant.password = newPass;
         saveState();
-        showToast("Duyuru silindi", "warning");
+        showToast("Şifreniz başarıyla değiştirildi!", "success");
       }
     }
 
-    // ON LOAD INIT
-    window.onload = function() {
-      const today = getTodayDateString();
-      ['user-expire', 'treat-date', 'breed-date', 'oestrus-startdate', 'fin-date', 'pay-date'].forEach(id => {
-        const el = document.getElementById(id);
-        if (el && !el.value) el.value = today;
-      });
+    function copyManifestJson() {
+      const codeText = document.getElementById('manifest-code-block').innerText;
+      const textArea = document.createElement('textarea');
+      textArea.value = codeText;
+      document.body.appendChild(textArea);
+      textArea.select();
+      document.execCommand('copy');
+      document.body.removeChild(textArea);
+      showToast("manifest.json içeriği kopyalandı!", "success");
+    }
 
-      const defaultExpire = new Date();
-      defaultExpire.setDate(defaultExpire.getDate() + 365);
-      const expireEl = document.getElementById('user-expire');
-      if (expireEl) expireEl.value = defaultExpire.toISOString().split('T')[0];
+    window.onload = function() {
+      const todayStr = getTodayDateString();
+      ['treat-date', 'breed-date', 'fin-date', 'pay-date', 'tenant-expires', 'oestrus-startdate', 'animal-birth'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el && !el.value) el.value = todayStr;
+      });
 
       checkAuthAndInit();
     };
   </script>
+
 </body>
 </html>
